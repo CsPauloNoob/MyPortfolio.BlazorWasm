@@ -1,32 +1,21 @@
 ﻿@page "/"
-@inject NavigationManager Navigation;
-@inject CurriculumHeader _curriculumHeader;
 
-@if(IsOwnerPage)
-{
-    <Paulo></Paulo>
-}
-
-else
-{
-    <p>oi</p>
-}
-
+<Paulo></Paulo>
 
 @code{
 
     #region Props
 
-    public bool IsOwnerPage = true;
+    //public bool IsOwnerPage = true;
 
-    [Parameter]
+    /*[Parameter]
     [SupplyParameterFromQuery(Name = "username")]
-    public string? userName { get; set; } = null;
+    public string? userName { get; set; } = null;*/
 
 
     #endregion
 
-    protected override void OnInitialized()
+    /*protected override void OnInitialized()
     {
         var uri = Navigation.ToAbsoluteUri(Navigation.Uri);
 
@@ -39,6 +28,6 @@ else
         }
 
         else IsOwnerPage = true;
-    }
+    }*/
 
 }

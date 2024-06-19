@@ -26,6 +26,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Custom.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [e:/Projetos/MyPortfolio.BlazorWasm/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,9 +46,25 @@ build_metadata.AdditionalFiles.CssScope = b-3bk72o3pqt
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xFeHBlcmllbmNlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-enzff9ttot
 
+[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/Menu_lateral.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xNZW51X2xhdGVyYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-gpvpat6tm3
+
+[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/Midias_Sociais.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xNaWRpYXNfU29jaWFpcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-4z66dh5sbc
+
 [e:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/Paulo.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xQYXVsby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-n9tzlzx5jk
+
+[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/SobreMim.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xTb2JyZU1pbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-pluy0jg0g8
+
+[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/TituloPrincipal.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xUaXR1bG9QcmluY2lwYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-dgroo8ejg8
 
 [e:/Projetos/MyPortfolio.BlazorWasm/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=

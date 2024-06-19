@@ -1,0 +1,17 @@
+﻿.principal h1 {
+    margin-bottom: 0;
+    font-size: 56px;
+}
+
+
+.titulo-nome {
+    margin: 8% auto 4% auto;
+}
+
+#primeiro-nome {
+    color: goldenrod;
+}
+
+.email {
+    font-size: 24px;
+}

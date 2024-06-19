@@ -1,7 +1,7 @@
-h1[b-n9tzlzx5jk] {
+/*h1 {
     margin-bottom: 0;
     font-size: 56px;
-}
+}*/
 
 .principal[b-n9tzlzx5jk] {
     width: 80%;
@@ -14,17 +14,17 @@ h1[b-n9tzlzx5jk] {
     text-align: justify;
 }
 
-.titulo-nome[b-n9tzlzx5jk] {
+/*.titulo-nome {
     margin: 8% auto 4% auto;
 }
 
-#primeiro-nome[b-n9tzlzx5jk] {
+#primeiro-nome {
     color: goldenrod;
 }
 
-.email[b-n9tzlzx5jk] {
+.email {
     font-size: 24px;
-}
+}*/
 
 .lateral[b-n9tzlzx5jk] {
     width: 15%;
@@ -45,40 +45,35 @@ h1[b-n9tzlzx5jk] {
     justify-content: center;
 }
 
-.principal h2[b-n9tzlzx5jk] {
-    color: black;
-}
-
-.principal p[b-n9tzlzx5jk] {
-    font-size: 18px;
-}
 
 .resumo[b-n9tzlzx5jk] {
     height: 70vh;
     border-bottom: 1px solid black;
 }
 
-.midias-sociais[b-n9tzlzx5jk] {
+/*.midias-sociais {
     
     display: flex;
     justify-content: center;
     margin-top: 5%;
 }
 
-.midias-sociais img[b-n9tzlzx5jk] {
+.midias-sociais img {
     width: 40px;
     height: 40px;
 }
 
-.midias-sociais ul[b-n9tzlzx5jk] {
+.midias-sociais ul {
     list-style: none;
     padding-left: 0%;
     display: flex;
 }
 
-.midias-sociais li[b-n9tzlzx5jk] {
+.midias-sociais li {
     margin: 0 25px 0 25px;
 }
+*/
+
 
 .secoes ul[b-n9tzlzx5jk] {
     padding: 0;
@@ -86,30 +81,31 @@ h1[b-n9tzlzx5jk] {
     list-style: none;
 }
 
-    .secoes ul li[b-n9tzlzx5jk] {
-        display: block;
-        width: 100%;
-        margin-top: 8px;
-        align-items: center;
-        justify-content: center;
-    }
+.secoes ul li[b-n9tzlzx5jk] {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    align-items: center;
+    justify-content: center;
+}
 
-        .secoes ul li a:hover[b-n9tzlzx5jk] {
-            background-color: red;
-        }
+.secoes ul li a:hover[b-n9tzlzx5jk] {
+    background-color: red;
+}
 
-        .secoes ul li a[b-n9tzlzx5jk] {
-            display: block;
-            text-align: center;
-        }
+.secoes ul li a[b-n9tzlzx5jk] {
+    display: block;
+    text-align: center;
+}
 
-.foto[b-n9tzlzx5jk] {
+/*.foto {
     height: 33%;
     justify-content: center;
 }
 
-    .foto img[b-n9tzlzx5jk] {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-    }
+.foto img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+*/

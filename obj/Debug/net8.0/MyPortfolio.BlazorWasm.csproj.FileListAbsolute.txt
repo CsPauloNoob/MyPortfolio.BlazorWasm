@@ -1062,3 +1062,8 @@ E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\compressed\tp6x7ebpr3.gz
 E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\scopedcss\Pages\Components\Educacao.razor.rz.scp.css
 E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\scopedcss\Pages\Components\Experience.razor.rz.scp.css
 E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\scopedcss\Pages\Components\Paulo.razor.rz.scp.css
+E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\MyPortfolio.BlazorWasm.sourcelink.json
+E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\scopedcss\Pages\Components\Menu_lateral.razor.rz.scp.css
+E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\scopedcss\Pages\Components\SobreMim.razor.rz.scp.css
+E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\scopedcss\Pages\Components\Midias_Sociais.razor.rz.scp.css
+E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\scopedcss\Pages\Components\TituloPrincipal.razor.rz.scp.css

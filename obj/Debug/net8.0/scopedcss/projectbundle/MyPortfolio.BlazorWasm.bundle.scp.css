@@ -53,11 +53,75 @@
     margin-bottom: 20px;
     font-size: 16px;
 }
+/* /Pages/Components/Menu_lateral.razor.rz.scp.css */
+.secoes[b-gpvpat6tm3] {
+    display: flex;
+    width: 100%;
+    height: 33%;
+    flex-direction: column;
+    justify-content: center;
+}
+.secoes ul[b-gpvpat6tm3] {
+    padding: 0;
+    align-items: center;
+    list-style: none;
+}
+
+.secoes ul li[b-gpvpat6tm3] {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.secoes ul li a:hover[b-gpvpat6tm3] {
+    background-color: red;
+}
+
+.secoes ul li a[b-gpvpat6tm3] {
+    display: block;
+    text-align: center;
+}
+
+.foto[b-gpvpat6tm3] {
+    height: 33%;
+    justify-content: center;
+}
+
+.foto img[b-gpvpat6tm3] {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+/* /Pages/Components/Midias_Sociais.razor.rz.scp.css */
+
+
+.midias-sociais[b-4z66dh5sbc] {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+    .midias-sociais img[b-4z66dh5sbc] {
+        width: 40px;
+        height: 40px;
+    }
+
+    .midias-sociais ul[b-4z66dh5sbc] {
+        list-style: none;
+        padding-left: 0%;
+        display: flex;
+    }
+
+    .midias-sociais li[b-4z66dh5sbc] {
+        margin: 0 25px 0 25px;
+    }
 /* /Pages/Components/Paulo.razor.rz.scp.css */
-h1[b-n9tzlzx5jk] {
+/*h1 {
     margin-bottom: 0;
     font-size: 56px;
-}
+}*/
 
 .principal[b-n9tzlzx5jk] {
     width: 80%;
@@ -70,17 +134,17 @@ h1[b-n9tzlzx5jk] {
     text-align: justify;
 }
 
-.titulo-nome[b-n9tzlzx5jk] {
+/*.titulo-nome {
     margin: 8% auto 4% auto;
 }
 
-#primeiro-nome[b-n9tzlzx5jk] {
+#primeiro-nome {
     color: goldenrod;
 }
 
-.email[b-n9tzlzx5jk] {
+.email {
     font-size: 24px;
-}
+}*/
 
 .lateral[b-n9tzlzx5jk] {
     width: 15%;
@@ -101,40 +165,35 @@ h1[b-n9tzlzx5jk] {
     justify-content: center;
 }
 
-.principal h2[b-n9tzlzx5jk] {
-    color: black;
-}
-
-.principal p[b-n9tzlzx5jk] {
-    font-size: 18px;
-}
 
 .resumo[b-n9tzlzx5jk] {
     height: 70vh;
     border-bottom: 1px solid black;
 }
 
-.midias-sociais[b-n9tzlzx5jk] {
+/*.midias-sociais {
     
     display: flex;
     justify-content: center;
     margin-top: 5%;
 }
 
-.midias-sociais img[b-n9tzlzx5jk] {
+.midias-sociais img {
     width: 40px;
     height: 40px;
 }
 
-.midias-sociais ul[b-n9tzlzx5jk] {
+.midias-sociais ul {
     list-style: none;
     padding-left: 0%;
     display: flex;
 }
 
-.midias-sociais li[b-n9tzlzx5jk] {
+.midias-sociais li {
     margin: 0 25px 0 25px;
 }
+*/
+
 
 .secoes ul[b-n9tzlzx5jk] {
     padding: 0;
@@ -142,33 +201,43 @@ h1[b-n9tzlzx5jk] {
     list-style: none;
 }
 
-    .secoes ul li[b-n9tzlzx5jk] {
-        display: block;
-        width: 100%;
-        margin-top: 8px;
-        align-items: center;
-        justify-content: center;
-    }
+.secoes ul li[b-n9tzlzx5jk] {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    align-items: center;
+    justify-content: center;
+}
 
-        .secoes ul li a:hover[b-n9tzlzx5jk] {
-            background-color: red;
-        }
+.secoes ul li a:hover[b-n9tzlzx5jk] {
+    background-color: red;
+}
 
-        .secoes ul li a[b-n9tzlzx5jk] {
-            display: block;
-            text-align: center;
-        }
+.secoes ul li a[b-n9tzlzx5jk] {
+    display: block;
+    text-align: center;
+}
 
-.foto[b-n9tzlzx5jk] {
+/*.foto {
     height: 33%;
     justify-content: center;
 }
 
-    .foto img[b-n9tzlzx5jk] {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-    }
+.foto img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+*/
+/* /Pages/Components/SobreMim.razor.rz.scp.css */
+h2[b-pluy0jg0g8] {
+    color: black;
+}
+
+
+p[b-pluy0jg0g8] {
+    font-size: 18px;
+}
 /* /Pages/Index.razor.rz.scp.css */
 h1[b-agrg2uo609]{
     margin-bottom: 0;

@@ -1,7 +1,7 @@
-﻿h1 {
+﻿/*h1 {
     margin-bottom: 0;
     font-size: 56px;
-}
+}*/
 
 .principal {
     width: 80%;
@@ -14,7 +14,7 @@
     text-align: justify;
 }
 
-.titulo-nome {
+/*.titulo-nome {
     margin: 8% auto 4% auto;
 }
 
@@ -24,7 +24,7 @@
 
 .email {
     font-size: 24px;
-}
+}*/
 
 .lateral {
     width: 15%;
@@ -45,20 +45,13 @@
     justify-content: center;
 }
 
-.principal h2 {
-    color: black;
-}
-
-.principal p {
-    font-size: 18px;
-}
 
 .resumo {
     height: 70vh;
     border-bottom: 1px solid black;
 }
 
-.midias-sociais {
+/*.midias-sociais {
     
     display: flex;
     justify-content: center;
@@ -79,6 +72,8 @@
 .midias-sociais li {
     margin: 0 25px 0 25px;
 }
+*/
+
 
 .secoes ul {
     padding: 0;
@@ -86,30 +81,31 @@
     list-style: none;
 }
 
-    .secoes ul li {
-        display: block;
-        width: 100%;
-        margin-top: 8px;
-        align-items: center;
-        justify-content: center;
-    }
+.secoes ul li {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    align-items: center;
+    justify-content: center;
+}
 
-        .secoes ul li a:hover {
-            background-color: red;
-        }
+.secoes ul li a:hover {
+    background-color: red;
+}
 
-        .secoes ul li a {
-            display: block;
-            text-align: center;
-        }
+.secoes ul li a {
+    display: block;
+    text-align: center;
+}
 
-.foto {
+/*.foto {
     height: 33%;
     justify-content: center;
 }
 
-    .foto img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-    }
+.foto img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+*/
