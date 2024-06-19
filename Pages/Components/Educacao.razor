@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>
+        EDUCAÇÃO
+    </h1>
+        @foreach (var item in educ)
+        {
+            <div class="formacoes">
+
+                <h2>
+                    @item[0]
+                </h2>
+
+                <div class="descricao">
+                    @item[1] Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut suscipit quibusdam dignissimos? Est laborum nam praesentium adipisci cum quam magni repellendus in fuga, distinctio quo. Aspernatur perspiciatis dolore autem quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni qui non et asperiores, velit perspiciatis voluptate praesentium ullam voluptas eveniet quasi a mollitia quia officia facilis, hic iure odio quis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quisquam iste expedita ea sunt aut, perspiciatis amet aspernatur at. Sint repudiandae animi nobis odio sequi quia voluptate nihil iure eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta tempora molestias numquam, distinctio, fuga cumque similique doloremque vitae illum ipsa beatae? Repudiandae quos laborum consequatur. Repellat odit molestiae vitae saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem architecto, necessitatibus ex ea maxime numquam porro assumenda voluptates eaque aut sed cum illo consequuntur dolore atque aliquid accusamus laudantium delectus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, provident, alias dignissimos dolores atque molestias temporibus corrupti asperiores nemo tenetur necessitatibus! Ex nam at, ipsa aperiam nostrum animi fuga obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus accusamus consequatur aliquid modi ab exercitationem blanditiis eveniet, deleniti cum amet ipsa corporis optio sed, commodi autem rerum dignissimos unde inventore?
+                </div>
+
+            </div>
+        }
+</div>
+
+@code{
+    List<string[]> educ = new();
+
+    protected override void OnInitialized()
+    {
+        for (int i = 0; i <= 5; i++)
+        {
+            educ.Add(new string[] {$"Programador {i}", $"Descrição {i}"});
+        }
+    }
+}

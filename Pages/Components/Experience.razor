@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>
+        EXPERIÊNCIA
+    </h1>
+        @foreach (var item in _experiencia)
+        {
+            <div class="experiencias">
+
+                <h2>
+                    @item.Funcao
+                </h2>
+
+                <div class="descricao">
+                    @item.Descricao
+                </div>
+
+            </div>
+        }
+</div>
+
+@code{
+
+    [Parameter]
+    public List<Experiencia> _experiencia {get; set;} = new();
+}
