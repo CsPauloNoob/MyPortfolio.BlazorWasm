@@ -1,40 +1,26 @@
-/*h1 {
-    margin-bottom: 0;
-    font-size: 56px;
-}*/
 
 .principal[b-n9tzlzx5jk] {
-    width: 80%;
-    padding: 20px 10% 20px 0;
+    width: 100%;
+    padding: 20px 20% 0 20px;
     overflow-y: auto;
     height: 100vh;
     color: grey;
-    margin-left: 18%;
+    margin-left: 16%;
     margin-top: 52px;
     text-align: justify;
 }
 
-/*.titulo-nome {
-    margin: 8% auto 4% auto;
-}
-
-#primeiro-nome {
-    color: goldenrod;
-}
-
-.email {
-    font-size: 24px;
-}*/
-
 .lateral[b-n9tzlzx5jk] {
-    width: 15%;
-    height: 100vh; /* Altura total da viewport */
-    background-color: azure;
+    width: 16%;
+    height: 100%;
+    background-color: red;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: fixed; /* Fixa o menu lateral */
+    top: 0;
+    left: 0;
+    position: fixed;
 }
 
 .secoes[b-n9tzlzx5jk] {
@@ -51,29 +37,17 @@
     border-bottom: 1px solid black;
 }
 
-/*.midias-sociais {
-    
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
+.experiencia[b-n9tzlzx5jk] {
+    border-bottom: 1px solid black;
 }
 
-.midias-sociais img {
-    width: 40px;
-    height: 40px;
+.curso[b-n9tzlzx5jk] {
+    border-bottom: 1px solid black;
 }
 
-.midias-sociais ul {
-    list-style: none;
-    padding-left: 0%;
-    display: flex;
+.educacao[b-n9tzlzx5jk] {
+    border-bottom: 1px solid black;
 }
-
-.midias-sociais li {
-    margin: 0 25px 0 25px;
-}
-*/
-
 
 .secoes ul[b-n9tzlzx5jk] {
     padding: 0;
@@ -97,15 +71,3 @@
     display: block;
     text-align: center;
 }
-
-/*.foto {
-    height: 33%;
-    justify-content: center;
-}
-
-.foto img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-}
-*/

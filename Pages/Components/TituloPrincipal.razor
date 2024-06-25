@@ -1,14 +1,42 @@
-﻿<div class="principal">
-    <h1>
-        <span id="primeiro-nome">PAULO</span>
-        SÉRGIO
-    </h1>
+﻿
+@if (IsOwnerPage)
+{
+    <div class="principal">
+        <h1>
+            <span id="primeiro-nome">PAULO</span>
+            SÉRGIO
+        </h1>
 
-    <span class="email">
-        <strong>Email:</strong>
-    </span>
+        <span class="subtitulo">
+            <i>Desenvolvedor Back-End .NET</i>
+        </span>
+    </div>
+}
 
-    <a target="_blank" href="mailto:ps616131@gmail.com" class="email">
-        PS616131@GMAIL.COM
-    </a>
-</div>
+else
+{
+    <div class="principal">
+        <h1>
+            @Nome
+        </h1>
+
+        <span class="email">
+            <strong>Email:</strong>
+        </span>
+
+        <a target="_blank" href="mailto:ps616131@gmail.com" class="email">
+            @Email
+        </a>
+    </div>
+}
+
+@code{
+    [Parameter]
+    public bool IsOwnerPage { get; set; } = true;
+
+    [Parameter]
+    public string? Nome { get; set; }
+
+    [Parameter]
+    public string? Email { get; set; }
+}

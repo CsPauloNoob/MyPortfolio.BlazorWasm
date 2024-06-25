@@ -1,0 +1,70 @@
+﻿<div class="container">
+    <h1>
+        CURSOS EXTRA
+    </h1>
+
+    @if(IsOwnerPage)
+    {
+        <div class="cursos">
+
+            <h2>
+                ASP.NET Core: Aprendendo do zero ao avançado (v 1.1 e 2.0)
+            </h2>
+
+            <div class="org">
+                2020 - UDEMY
+            </div>
+
+            <h2>
+                Microsoft Azure Infraestrutura - Curso Completo
+            </h2>
+
+            <div class="org">
+                2021 - UDEMY
+            </div>
+
+            <h2>
+                C# Avançado
+            </h2>
+
+            <div class="org">
+                2020 - Fundação Bradesco
+            </div>
+
+            <h2>
+                Fundamentos Blazor Server
+            </h2>
+
+            <div class="org">
+                2024 - Balta.io
+            </div>
+
+        </div>
+    }
+
+    else
+    {
+        @foreach (var item in _cursosExtra)
+        {
+            <div class="cursos">
+
+                <h2>
+                    @item.NomeCurso
+                </h2>
+
+                <div class="descricao">
+                    @item.Organizacao
+                </div>
+
+            </div>
+        }
+    }
+</div>
+
+@code {
+    [Parameter]
+    public bool IsOwnerPage { get; set; } = true;
+
+    [Parameter]
+    public List<CursosExtraModel> _cursosExtra { get; set; } = new();
+}

@@ -13,59 +13,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = MyPortfolio.BlazorWasm
 build_property.RootNamespace = MyPortfolio.BlazorWasm
-build_property.ProjectDir = e:\Projetos\MyPortfolio.BlazorWasm\
+build_property.ProjectDir = E:\Projetos\MyPortfolio.BlazorWasm\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = e:\Projetos\MyPortfolio.BlazorWasm
+build_property.MSBuildProjectDirectory = E:\Projetos\MyPortfolio.BlazorWasm
 build_property._RazorSourceGeneratorDebug = 
 
-[e:/Projetos/MyPortfolio.BlazorWasm/App.razor]
+[E:/Projetos/MyPortfolio.BlazorWasm/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Custom.razor]
+[E:/Projetos/MyPortfolio.BlazorWasm/Pages/Custom.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Projetos/MyPortfolio.BlazorWasm/_Imports.razor]
+[E:/Projetos/MyPortfolio.BlazorWasm/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Projetos/MyPortfolio.BlazorWasm/Layout/MainLayout.razor]
+[E:/Projetos/MyPortfolio.BlazorWasm/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-25u0cdoe16
 
-[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/Educacao.razor]
+[E:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/CursosExtra.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xDdXJzb3NFeHRyYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-c7gy2x9rg1
+
+[E:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/Educacao.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xFZHVjYWNhby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-3bk72o3pqt
 
-[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/Experience.razor]
+[E:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/Experience.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xFeHBlcmllbmNlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-enzff9ttot
 
-[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/Menu_lateral.razor]
+[E:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/Menu_lateral.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xNZW51X2xhdGVyYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-gpvpat6tm3
 
-[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/Midias_Sociais.razor]
+[E:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/Midias_Sociais.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xNaWRpYXNfU29jaWFpcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-4z66dh5sbc
 
-[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/Paulo.razor]
+[E:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/Paulo.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xQYXVsby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-n9tzlzx5jk
 
-[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/SobreMim.razor]
+[E:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/SobreMim.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xTb2JyZU1pbS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-pluy0jg0g8
 
-[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/TituloPrincipal.razor]
+[E:/Projetos/MyPortfolio.BlazorWasm/Pages/Components/TituloPrincipal.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xUaXR1bG9QcmluY2lwYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-dgroo8ejg8
 
-[e:/Projetos/MyPortfolio.BlazorWasm/Pages/Index.razor]
+[E:/Projetos/MyPortfolio.BlazorWasm/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-agrg2uo609

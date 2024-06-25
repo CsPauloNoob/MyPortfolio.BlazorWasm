@@ -1,4 +1,8 @@
-﻿.principal h1 {
+﻿.principal{
+    margin-bottom: 60px;
+}
+
+.principal h1 {
     margin-bottom: 0;
     font-size: 56px;
 }
@@ -12,6 +16,6 @@
     color: goldenrod;
 }
 
-.email {
+.subtitulo {
     font-size: 24px;
 }

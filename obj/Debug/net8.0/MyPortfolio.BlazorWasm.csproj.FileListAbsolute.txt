@@ -1067,3 +1067,4 @@ E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\scopedcss\Pages\Components\M
 E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\scopedcss\Pages\Components\SobreMim.razor.rz.scp.css
 E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\scopedcss\Pages\Components\Midias_Sociais.razor.rz.scp.css
 E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\scopedcss\Pages\Components\TituloPrincipal.razor.rz.scp.css
+E:\Projetos\MyPortfolio.BlazorWasm\obj\Debug\net8.0\scopedcss\Pages\Components\CursosExtra.razor.rz.scp.css
