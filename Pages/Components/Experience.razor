@@ -1,7 +1,43 @@
 <div class="container">
-    <h1>
-        EXPERIÊNCIA
-    </h1>
+
+    @if(_paginaPaulo)
+    {
+        <h1>
+            EXPERIÊNCIA
+        </h1>
+
+        <div class="experiencias">
+
+            <h2>
+                Programador Desktop Freelancer
+            </h2>
+            <div class="descricao">
+                Trabalhei como programador desktop desenvolvendo uma plataforma que automatizava o envio de vídeos para o YouTube. Esse projeto envolveu a interação com diversas APIs, incluindo a do YouTube para o upload dos vídeos, a do ChatGPT para a criação de roteiros, e a do Azure TTS para a geração de voiceovers.
+
+                Durante o desenvolvimento, utilizei .NET 6 e Windows Forms. Foi uma experiência desafiadora que me ensinou, muitas vezes da maneira mais difícil, a importância de um código bem organizado e os benefícios de refatorar regularmente. Essa prática não só melhora a qualidade do código, mas também facilita a manutenção e expansão futuras.
+
+                Esse projeto foi uma grande oportunidade de crescimento e aprendizado, e reforçou minha paixão por enfrentar desafios complexos e encontrar soluções eficientes.
+            </div>
+
+            <h2>
+                Experiência no Desafio "May the 4th" do Balta.io
+            </h2>
+            <div class="descricao">
+                Participei do desafio "May the 4th" organizado pelo Balta.io, onde trabalhei em equipe com uma estrutura próxima a de um ambiente profissional. Nossa equipe era composta por cinco membros: três desenvolvedores juniores, um desenvolvedor pleno e um líder sênior. Durante o desafio, dividimos o trabalho de forma colaborativa, fomos supervisionados e seguimos prazos rigorosos.
+
+                Essa experiência foi valiosa, pois nos ajudamos mutuamente, promovendo um ambiente de aprendizado contínuo. Também realizamos code reviews em conjunto, o que aprimorou a qualidade do nosso código e facilitou a troca de conhecimentos entre os membros da equipe.
+            </div>
+
+        </div>
+
+    }
+
+    else
+    {
+        <h1>
+            EXPERIÊNCIA
+        </h1>
+
         @foreach (var item in _experiencia)
         {
             <div class="experiencias">
@@ -16,9 +52,14 @@
 
             </div>
         }
+    }
+
 </div>
 
 @code{
+
+    [Parameter]
+    public bool _paginaPaulo {get; set;}
 
     [Parameter]
     public List<Experiencia> _experiencia {get; set;} = new();
