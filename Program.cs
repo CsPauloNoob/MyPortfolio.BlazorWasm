@@ -7,14 +7,14 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-//injeção de dependencias
+//injeï¿½ï¿½o de dependencias
 builder.Services.injectDependences();
 
 builder.Services
     .AddHttpClient(
         WebConfiguration.Name,
         opt =>
-        {
+        { 
             opt.BaseAddress = new Uri("http://localhost:5260/V1/api");
         });
 

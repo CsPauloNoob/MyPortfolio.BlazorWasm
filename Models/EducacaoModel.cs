@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MyPortfolio.BlazorWasm.Models
 {
-    public class Educacao
+    public class EducacaoModel
     {
         public string? Instituicao { get; set; }
         public string? Curso { get; set; }
