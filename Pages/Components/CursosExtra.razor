@@ -3,7 +3,7 @@
         CURSOS EXTRA
     </h1>
 
-    @if(IsOwnerPage)
+    @if (_paginaPaulo)
     {
         <div class="cursos">
 
@@ -63,7 +63,7 @@
 
 @code {
     [Parameter]
-    public bool IsOwnerPage { get; set; } = true;
+    public bool _paginaPaulo { get; set; }
 
     [Parameter]
     public List<CursosExtraModel> _cursosExtra { get; set; } = new();

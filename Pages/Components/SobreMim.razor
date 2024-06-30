@@ -1,11 +1,32 @@
-﻿<h2>Sobre mim</h2>
+﻿<div class="container">
 
-<p>Olá! Sou um programador especializado em desenvolvimento back-end utilizando <strong>.NET</strong> e <strong>C#</strong>. Desde cedo, sempre fui apaixonado por tecnologias e pela programação, o que me levou a iniciar minha jornada acadêmica em Análise e Desenvolvimento de Sistemas em 2018. Minha formação e experiência me tornaram um profissional pragmático, com uma abordagem prática e eficiente para resolver problemas e desenvolver soluções robustas.</p>
+    @if (_paginaPaulo)
+    {
+        <h2>Sobre mim</h2>
 
-<p>Sou uma pessoa que se motiva com desafios e novas ideias. A possibilidade de explorar e implementar inovações tecnológicas me deixa extremamente empolgado. No entanto, compreendo que a excelência também reside na atenção aos detalhes e na execução de tarefas básicas e repetitivas com o mesmo nível de dedicação e cuidado.</p>
+        <p>Olá! Sou um programador especializado em desenvolvimento back-end utilizando <strong>.NET</strong> e <strong>C#</strong>. Desde cedo, sempre fui apaixonado por tecnologias e pela programação, o que me levou a iniciar minha jornada acadêmica em Análise e Desenvolvimento de Sistemas em 2018. Minha formação e experiência me tornaram um profissional pragmático, com uma abordagem prática e eficiente para resolver problemas e desenvolver soluções robustas.</p>
 
-<p>Trabalhar em equipe é uma das minhas maiores paixões. Acredito que a colaboração é uma oportunidade valiosa para aprender e trocar experiências com diversas pessoas, o que enriquece não só o projeto em desenvolvimento, mas também o crescimento pessoal e profissional de todos os envolvidos.</p>
+        <p>Sou uma pessoa que se motiva com desafios e novas ideias. A possibilidade de explorar e implementar inovações tecnológicas me deixa extremamente empolgado. No entanto, compreendo que a excelência também reside na atenção aos detalhes e na execução de tarefas básicas e repetitivas com o mesmo nível de dedicação e cuidado.</p>
 
-<p>Em termos de projetos, meu <a href="https://github.com/CsPauloNoob">GitHub</a> é um reflexo da minha diversidade de interesses e habilidades. Lá você encontrará desde APIs até aplicativos desktop. Embora meu repositório possa parecer um pouco desorganizado, ele contém exemplos claros do meu trabalho e da minha capacidade de desenvolver soluções variadas e resolver problemas</p>
+        <p>Trabalhar em equipe é uma das minhas maiores paixões. Acredito que a colaboração é uma oportunidade valiosa para aprender e trocar experiências com diversas pessoas, o que enriquece não só o projeto em desenvolvimento, mas também o crescimento pessoal e profissional de todos os envolvidos.</p>
 
-<p>Estou sempre aberto a novas oportunidades e desafios que me permitam crescer e contribuir com minha experiência e paixão pela tecnologia. Convido você a conferir meus projetos no GitHub e a me contatar para discutir como posso agregar valor à sua equipe ou projeto.</p>
+        <p>Em termos de projetos, meu <a href="https://github.com/CsPauloNoob">GitHub</a> é um reflexo da minha diversidade de interesses e habilidades. Lá você encontrará desde APIs até aplicativos desktop. Embora meu repositório possa parecer um pouco desorganizado, ele contém exemplos claros do meu trabalho e da minha capacidade de desenvolver soluções variadas e resolver problemas</p>
+
+        <p>Estou sempre aberto a novas oportunidades e desafios que me permitam crescer e contribuir com minha experiência e paixão pela tecnologia. Convido você a conferir meus projetos no GitHub e a me contatar para discutir como posso agregar valor à sua equipe ou projeto.</p>
+    }
+
+    else
+    {
+        <p>@resumo</p>
+    }
+
+</div>
+
+@code
+{
+    [Parameter]
+    public bool _paginaPaulo { get; set; }
+
+    [Parameter]
+    public string? resumo { get; set; }
+}
