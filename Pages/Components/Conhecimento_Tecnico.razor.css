@@ -1,0 +1,19 @@
+.container {
+    padding: 80px 48px 80px 48px;
+}
+
+.container h1 {
+    font-size: 38px;
+    color: rgb(14, 12, 12);
+    margin-bottom: 70px;
+}
+
+.container h2 {
+    margin-bottom: 15px;
+    color: black;
+}
+
+.conluna-skills
+{
+    flex-direction: column;
+}

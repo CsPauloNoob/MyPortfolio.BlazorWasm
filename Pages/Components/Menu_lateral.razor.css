@@ -5,8 +5,9 @@
     flex-direction: column;
     justify-content: center;
 }
+
 .secoes ul {
-    padding: 0;
+    padding: 0 0 70% 0;
     align-items: center;
     list-style: none;
 }
@@ -32,12 +33,13 @@
 }
 
 .foto {
-    height: 33%;
+    height: 45%;
     justify-content: center;
 }
 
 .foto img {
     width: 200px;
-    height: 200px;
+    height: 250px;
     border-radius: 50%;
+    padding: 80px;
 }
