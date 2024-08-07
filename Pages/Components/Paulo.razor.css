@@ -59,19 +59,19 @@
     list-style: none;
 }
 
-.secoes ul li {
-    display: block;
-    width: 100%;
-    margin-top: 8px;
-    align-items: center;
-    justify-content: center;
-}
+    .secoes ul li {
+        display: block;
+        width: 100%;
+        margin-top: 8px;
+        align-items: center;
+        justify-content: center;
+    }
 
-.secoes ul li a:hover {
-    background-color: red;
-}
+        .secoes ul li a:hover {
+            background-color: red;
+        }
 
-.secoes ul li a {
-    display: block;
-    text-align: center;
-}
+        .secoes ul li a {
+            display: block;
+            text-align: center;
+        }

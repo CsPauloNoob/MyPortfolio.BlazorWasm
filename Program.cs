@@ -7,7 +7,7 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-//inje��o de dependencias
+//injecao de dependencias
 builder.Services.injectDependences();
 
 builder.Services
@@ -17,5 +17,6 @@ builder.Services
         { 
             opt.BaseAddress = new Uri("http://localhost:5260/V1/api");
         });
+
 
 await builder.Build().RunAsync();

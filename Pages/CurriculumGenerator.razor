@@ -1,0 +1,167 @@
+﻿@page "/curriculum-gen"
+@using System.Net.Http.Json
+@inject HttpClient Http
+@layout LayoutAlternativo
+
+
+@code {
+    private Contato contato = new();
+    private Curriculum_Inicio curriculumInicio = new();
+    private List<CursosExtraModel> cursosExtra = new();
+    private List<EducacaoModel> educacao = new();
+    private List<Experiencia> experiencias = new();
+
+    private async Task SubmitForm()
+    {
+        var curriculum = new
+        {
+            Contato = contato,
+            CurriculumInicio = curriculumInicio,
+            CursosExtra = cursosExtra,
+            Educacao = educacao,
+            Experiencias = experiencias
+        };
+
+        var response = await Http.PostAsJsonAsync("https://api.example.com/curriculum", curriculum);
+        if (response.IsSuccessStatusCode)
+        {
+            // Handle success
+        }
+        else
+        {
+            // Handle failure
+        }
+    }
+
+    private void AddCursoExtra()
+    {
+        cursosExtra.Add(new CursosExtraModel());
+    }
+
+    private void AddEducacao()
+    {
+        educacao.Add(new EducacaoModel());
+    }
+
+    private void AddExperiencia()
+    {
+        experiencias.Add(new Experiencia());
+    }
+}
+
+<divc class="container">
+    <h3>Gerador de currículo</h3>
+    <EditForm Model="@this" OnValidSubmit="SubmitForm">
+
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <h4>Curriculum Inicio</h4>
+        <div>
+            <label>Nome:</label>
+            <InputText @bind-Value="curriculumInicio.Nome" />
+        </div>
+        <div>
+            <label>Perfil Programador:</label>
+            <InputText @bind-Value="curriculumInicio.PerfilProgramador" />
+        </div>
+        <div>
+            <label>Sobre Mim:</label>
+            <InputText @bind-Value="curriculumInicio.SobreMim" />
+        </div>
+        <div>
+            <label>Data de Criação:</label>
+            <InputDate @bind-Value="curriculumInicio.DataCriacao" />
+        </div>
+
+        <h4>Contato</h4>
+        <div>
+            <label>Email:</label>
+            <InputText @bind-Value="contato.Email" />
+        </div>
+        <div>
+            <label>Rua:</label>
+            <InputText @bind-Value="contato.Rua" />
+        </div>
+        <div>
+            <label>Bairro:</label>
+            <InputText @bind-Value="contato.Bairro" />
+        </div>
+        <div>
+            <label>Numero da Casa:</label>
+            <InputText @bind-Value="contato.NumeroCasa" />
+        </div>
+        <div>
+            <label>Cidade:</label>
+            <InputText @bind-Value="contato.Cidade" />
+        </div>
+        <div>
+            <label>Estado:</label>
+            <InputText @bind-Value="contato.Estado" />
+        </div>
+        <div>
+            <label>Codigo:</label>
+            <InputText @bind-Value="contato.Codigo" />
+        </div>
+        <div>
+            <label>DDD:</label>
+            <InputText @bind-Value="contato.DDD" />
+        </div>
+        <div>
+            <label>Numero Telefone/Celular:</label>
+            <InputText @bind-Value="contato.NumeroTelefone_Celular" />
+        </div>
+
+        <h4>Cursos Extra</h4>
+        @foreach (var curso in cursosExtra)
+        {
+            <div>
+                <label>Nome do Curso:</label>
+                <InputText @bind-Value="curso.NomeCurso" />
+            </div>
+            <div>
+                <label>Organização:</label>
+                <InputText @bind-Value="curso.Organizacao" />
+            </div>
+        }
+        <button type="button" @onclick="AddCursoExtra">Adicionar Curso Extra</button>
+
+        <h4>Educação</h4>
+        @foreach (var edu in educacao)
+        {
+            <div>
+                <label>Instituição:</label>
+                <InputText @bind-Value="edu.Instituicao" />
+            </div>
+            <div>
+                <label>Curso:</label>
+                <InputText @bind-Value="edu.Curso" />
+            </div>
+            <div>
+                <label>Ano de Conclusão:</label>
+                <InputText @bind-Value="edu.AnoConclusao" />
+            </div>
+        }
+        <button type="button" @onclick="AddEducacao">Adicionar Educação</button>
+
+        <h4>Experiências</h4>
+        @foreach (var exp in experiencias)
+        {
+            <div>
+                <label>Nome da Organização:</label>
+                <InputText @bind-Value="exp.Nome_Organizacao" />
+            </div>
+            <div>
+                <label>Função:</label>
+                <InputText @bind-Value="exp.Funcao" />
+            </div>
+            <div>
+                <label>Descrição:</label>
+                <InputText @bind-Value="exp.Descricao" />
+            </div>
+        }
+        <button type="button" @onclick="AddExperiencia">Adicionar Experiência</button>
+
+        <button type="submit">Enviar</button>
+    </EditForm>
+</divc>
