@@ -1,10 +1,27 @@
-﻿<nav class="nav-menu">
+﻿@inject NavigationManager navigationManager
+
+<nav class="nav-menu">
     <div class="nav-container">
-        <a class="link-home" href="/">
+        <div class="button" href="#" @onclick="RedirectToHome">
             <img class="icone-casa" src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg" alt="Icone dotnet" />
-        </a>
-        <a href="/curriculum-gen">
+        </div>
+        <div class="button"  @onclick="RedirectToPdfGen">
             <img src="https://w7.pngwing.com/pngs/691/487/png-transparent-pdf-computer-icons-pdf-angle-image-file-formats-text.png" alt="Icone PDF" />
-        </a>
+        </div>
     </div>
 </nav>
+
+@code{
+    private void RedirectToPdfGen()
+    {
+
+         var url = navigationManager.Uri + "curriculum-gen";
+         navigationManager.NavigateTo(url);
+    }
+
+    private void RedirectToHome()
+    {
+        var url = navigationManager.Uri;
+        navigationManager.NavigateTo(url, true);
+    }
+}

@@ -1,9 +1,21 @@
-﻿namespace MyPortfolio.BlazorWasm.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MyPortfolio.BlazorWasm.Models
 {
     public class CursosExtraModel
     {
-        public string NomeCurso { get; set; }
+        //public CursosExtraModel()
+        //{
+        //    Nome_Curso = "Curso de finanças";
+        //    Organizacao = "Tabajara";
+        //}
 
-        public string? Organizacao { get; set;}
+
+        [Required]
+        [MaxLength(35)]
+        public string Nome_Curso { get; set; }
+
+        [MaxLength(35)]
+        public string Organizacao { get; set; }
     }
 }

@@ -10,13 +10,12 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 //injecao de dependencias
 builder.Services.injectDependences();
 
-builder.Services
-    .AddHttpClient(
-        WebConfiguration.Name,
-        opt =>
-        { 
-            opt.BaseAddress = new Uri("http://localhost:5260/V1/api");
-        });
+builder.Services.
+    AddHttpClient(WebConfiguration.Name,
+    opt =>
+    { 
+        opt.BaseAddress = new Uri("http://localhost:5260/V1/api");
+    });
 
 
 await builder.Build().RunAsync();

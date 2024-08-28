@@ -1,36 +1,30 @@
 ﻿@page "/curriculum-gen"
 @using System.Net.Http.Json
-@inject HttpClient Http
+@inject CurriculumPdf _curriculumPdf
 @layout LayoutAlternativo
 
 
 @code {
     private Contato contato = new();
-    private Curriculum_Inicio curriculumInicio = new();
+    private Inicio_Curriculum curriculumInicio = new();
     private List<CursosExtraModel> cursosExtra = new();
+    private List<Habilidades> habilidade = new();
     private List<EducacaoModel> educacao = new();
     private List<Experiencia> experiencias = new();
 
     private async Task SubmitForm()
     {
-        var curriculum = new
-        {
-            Contato = contato,
-            CurriculumInicio = curriculumInicio,
-            CursosExtra = cursosExtra,
-            Educacao = educacao,
-            Experiencias = experiencias
-        };
 
-        var response = await Http.PostAsJsonAsync("https://api.example.com/curriculum", curriculum);
-        if (response.IsSuccessStatusCode)
-        {
-            // Handle success
-        }
-        else
-        {
-            // Handle failure
-        }
+        var curriculo = new Curriculo_Completo();
+
+        curriculo.Contato = contato;
+        curriculo.Formacao = educacao;
+        curriculo.ExpProfissional = experiencias;
+        curriculo.Header = curriculumInicio;
+        curriculo.Habilidades = habilidade;
+        curriculo.Cursos_Extra = cursosExtra;
+
+        var obj = _curriculumPdf.GetCurriculumPdf(curriculo);
     }
 
     private void AddCursoExtra()
@@ -47,6 +41,11 @@
     {
         experiencias.Add(new Experiencia());
     }
+
+    private void AddHabilidade()
+    {
+        habilidade.Add(new Habilidades());
+    }
 }
 
 <divc class="container">
@@ -62,7 +61,7 @@
             <InputText @bind-Value="curriculumInicio.Nome" />
         </div>
         <div>
-            <label>Perfil Programador:</label>
+            <label>Função</label>
             <InputText @bind-Value="curriculumInicio.PerfilProgramador" />
         </div>
         <div>
@@ -112,12 +111,22 @@
             <InputText @bind-Value="contato.NumeroTelefone_Celular" />
         </div>
 
+        <h4>Habilidades</h4>
+        @foreach (var hab in habilidade)
+        {
+            <div>
+                <label>Habilidade</label>
+                <InputText @bind-Value="hab.Nome_Habilidade" />
+            </div>
+        }
+        <button type="button" @onclick="AddHabilidade">Adicionar Habilidade</button>
+
         <h4>Cursos Extra</h4>
         @foreach (var curso in cursosExtra)
         {
             <div>
                 <label>Nome do Curso:</label>
-                <InputText @bind-Value="curso.NomeCurso" />
+                <InputText @bind-Value="curso.Nome_Curso" />
             </div>
             <div>
                 <label>Organização:</label>
@@ -138,8 +147,8 @@
                 <InputText @bind-Value="edu.Curso" />
             </div>
             <div>
-                <label>Ano de Conclusão:</label>
-                <InputText @bind-Value="edu.AnoConclusao" />
+                 <label>Ano de Conclusão:</label>
+                <InputText @bind-Value="edu.AnoConclusao" /> 
             </div>
         }
         <button type="button" @onclick="AddEducacao">Adicionar Educação</button>
