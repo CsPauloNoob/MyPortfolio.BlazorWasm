@@ -13,8 +13,17 @@ builder.Services.injectDependences();
 builder.Services.
     AddHttpClient(WebConfiguration.Name,
     opt =>
-    { 
-        opt.BaseAddress = new Uri("http://localhost:5260/V1/api");
+    {
+#if DEBUG
+
+    opt.BaseAddress = new Uri("http://localhost:5260/V1/api");
+
+#else
+
+        opt.BaseAddress = new Uri("https://paulodev.azurewebsites.net/v1/api/");
+
+#endif
+
     });
 
 

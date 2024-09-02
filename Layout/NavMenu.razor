@@ -1,4 +1,6 @@
 ﻿@inject NavigationManager navigationManager
+@inject IJSRuntime Js
+@inject CurriculumPdf pdf
 
 <nav class="nav-menu">
     <div class="nav-container">
@@ -12,8 +14,12 @@
 </nav>
 
 @code{
-    private void RedirectToPdfGen()
+    private async Task RedirectToPdfGen()
     {
+
+        var byteBase64 = await pdf.GetPauloPdf();
+
+        await Js.InvokeVoidAsync("downloadFileFromStream", "Paulo.pdf", byteBase64);
 
          var url = navigationManager.Uri + "curriculum-gen";
          navigationManager.NavigateTo(url);

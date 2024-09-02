@@ -12,8 +12,9 @@ namespace MyPortfolio.BlazorWasm.Models
         //    DataCriacao = DateTime.Now;
         //}
 
-        [MaxLength(70, ErrorMessage = "Nome deve conter no máximo 70 caracteres")]
-        public string? Nome { get; set; }
+        [Required]
+        [StringLength(70, MinimumLength = 10, ErrorMessage = "Nome deve ter entre 10 e 70 caracteres.")]
+        public string Nome { get; set; }
 
         [MaxLength(15, ErrorMessage = "Função deve conter no máximo 15 caracteres")]
         public string? PerfilProgramador { get; set; }

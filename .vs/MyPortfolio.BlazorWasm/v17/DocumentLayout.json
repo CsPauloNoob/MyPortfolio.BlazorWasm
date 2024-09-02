@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "E:\\Projetos\\MyPortfolio.BlazorWasm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|e:\\projetos\\myportfolio.blazorwasm\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|E:\\Projetos\\MyPortfolio.BlazorWasm\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|e:\\projetos\\myportfolio.blazorwasm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|e:\\projetos\\myportfolio.blazorwasm\\endpoints\\curriculumpdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:endpoints\\curriculumpdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|E:\\Projetos\\MyPortfolio.BlazorWasm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|E:\\Projetos\\MyPortfolio.BlazorWasm\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|E:\\Projetos\\MyPortfolio.BlazorWasm\\wwwroot\\downloadfile.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:wwwroot\\downloadfile.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,41 +66,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DownloadFile.js",
+              "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\wwwroot\\DownloadFile.js",
+              "RelativeDocumentMoniker": "wwwroot\\DownloadFile.js",
+              "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\wwwroot\\DownloadFile.js",
+              "RelativeToolTip": "wwwroot\\DownloadFile.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-31T03:55:39.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CurriculumPdf.cs",
+              "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Endpoints\\CurriculumPdf.cs",
+              "RelativeDocumentMoniker": "Endpoints\\CurriculumPdf.cs",
+              "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Endpoints\\CurriculumPdf.cs",
+              "RelativeToolTip": "Endpoints\\CurriculumPdf.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T03:24:27.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "index.html",
               "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "wwwroot\\index.html",
               "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\wwwroot\\index.html",
               "RelativeToolTip": "wwwroot\\index.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA7AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-08-29T02:01:08.644Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABBAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-28T03:46:53.812Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "Layout\\NavMenu.razor",
               "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Layout\\NavMenu.razor",
               "RelativeToolTip": "Layout\\NavMenu.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAFAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-28T03:15:58.684Z"
+              "WhenOpened": "2024-08-28T03:15:58.684Z",
+              "EditorCaption": ""
             }
           ]
         }

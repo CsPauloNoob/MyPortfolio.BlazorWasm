@@ -3,55 +3,9 @@
 @inject CurriculumPdf _curriculumPdf
 @layout LayoutAlternativo
 
-
-@code {
-    private Contato contato = new();
-    private Inicio_Curriculum curriculumInicio = new();
-    private List<CursosExtraModel> cursosExtra = new();
-    private List<Habilidades> habilidade = new();
-    private List<EducacaoModel> educacao = new();
-    private List<Experiencia> experiencias = new();
-
-    private async Task SubmitForm()
-    {
-
-        var curriculo = new Curriculo_Completo();
-
-        curriculo.Contato = contato;
-        curriculo.Formacao = educacao;
-        curriculo.ExpProfissional = experiencias;
-        curriculo.Header = curriculumInicio;
-        curriculo.Habilidades = habilidade;
-        curriculo.Cursos_Extra = cursosExtra;
-
-        var obj = _curriculumPdf.GetCurriculumPdf(curriculo);
-    }
-
-    private void AddCursoExtra()
-    {
-        cursosExtra.Add(new CursosExtraModel());
-    }
-
-    private void AddEducacao()
-    {
-        educacao.Add(new EducacaoModel());
-    }
-
-    private void AddExperiencia()
-    {
-        experiencias.Add(new Experiencia());
-    }
-
-    private void AddHabilidade()
-    {
-        habilidade.Add(new Habilidades());
-    }
-}
-
-<divc class="container">
+<div class="container">
     <h3>Gerador de currículo</h3>
-    <EditForm Model="@this" OnValidSubmit="SubmitForm">
-
+    <EditForm EditContext="editContext" OnValidSubmit="SubmitForm">
         <DataAnnotationsValidator />
         <ValidationSummary />
 
@@ -59,18 +13,17 @@
         <div>
             <label>Nome:</label>
             <InputText @bind-Value="curriculumInicio.Nome" />
+            <ValidationMessage For="@(() => curriculumInicio.Nome)" />
         </div>
         <div>
             <label>Função</label>
             <InputText @bind-Value="curriculumInicio.PerfilProgramador" />
+            <ValidationMessage For="@(() => curriculumInicio.PerfilProgramador)" />
         </div>
         <div>
             <label>Sobre Mim:</label>
             <InputText @bind-Value="curriculumInicio.SobreMim" />
-        </div>
-        <div>
-            <label>Data de Criação:</label>
-            <InputDate @bind-Value="curriculumInicio.DataCriacao" />
+            <ValidationMessage For="@(() => curriculumInicio.SobreMim)" />
         </div>
 
         <h4>Contato</h4>
@@ -78,7 +31,7 @@
             <label>Email:</label>
             <InputText @bind-Value="contato.Email" />
         </div>
-        <div>
+@*         <div>
             <label>Rua:</label>
             <InputText @bind-Value="contato.Rua" />
         </div>
@@ -97,7 +50,7 @@
         <div>
             <label>Estado:</label>
             <InputText @bind-Value="contato.Estado" />
-        </div>
+        </div> *@
         <div>
             <label>Codigo:</label>
             <InputText @bind-Value="contato.Codigo" />
@@ -173,4 +126,59 @@
 
         <button type="submit">Enviar</button>
     </EditForm>
-</divc>
+</div>
+
+
+@code {
+    private Contato contato = new();
+    private Inicio_Curriculum curriculumInicio = new();
+    private List<CursosExtraModel> cursosExtra = new();
+    private List<Habilidades> habilidade = new();
+    private List<EducacaoModel> educacao = new();
+    private List<Experiencia> experiencias = new();
+
+    private EditContext editContext;
+
+    protected override void OnInitialized()
+    {
+        editContext = new EditContext(this);
+    }
+
+    private async Task SubmitForm()
+    {
+        if (editContext.Validate())
+        {
+            var curriculo = new Curriculo_Completo
+                {
+                    Contato = contato,
+                    Formacao = educacao,
+                    ExpProfissional = experiencias,
+                    Header = curriculumInicio,
+                    Habilidades = habilidade,
+                    Cursos_Extra = cursosExtra
+                };
+
+            var obj = _curriculumPdf.GetCurriculumPdf(curriculo);
+        }
+    }
+
+    private void AddCursoExtra()
+    {
+        cursosExtra.Add(new CursosExtraModel());
+    }
+
+    private void AddEducacao()
+    {
+        educacao.Add(new EducacaoModel());
+    }
+
+    private void AddExperiencia()
+    {
+        experiencias.Add(new Experiencia());
+    }
+
+    private void AddHabilidade()
+    {
+        habilidade.Add(new Habilidades());
+    }
+}

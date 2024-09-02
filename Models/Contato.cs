@@ -14,24 +14,25 @@ namespace MyPortfolio.BlazorWasm.Models
 
         public Contato()
         {
-            Email = "Email@gov.br";
-            Email = "www.linkedin.com";
-            Rua = "Rua foi de exemplo";
-            Bairro = "Dom CArlos 8�";
-            NumeroCasa = "22";
-            Cidade = "Ponta Grossa";
-            Estado = "MG";
-            Codigo = "+55";
-            DDD = "99";
-            NumeroTelefone_Celular = "22233344";
+            //Email = "Email@gov.br";
+            //Email = "www.linkedin.com";
+            //Rua = "Rua foi de exemplo";
+            //Bairro = "Dom CArlos 8�";
+            //NumeroCasa = "22";
+            //Cidade = "Ponta Grossa";
+            //Estado = "MG";
+            //Codigo = "+55";
+            //DDD = "99";
+            //NumeroTelefone_Celular = "22233344";
         }
 
         [Required]
         public string Email { get; set; }
 
+        [MaxLength(30)]
         public string? LinkedIn { get; set; }
 
-        [MaxLength(50)]
+        [Range(3, 50)]
         public string Rua { get; set; }
 
         [MaxLength(50)]

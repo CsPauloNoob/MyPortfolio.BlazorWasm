@@ -33,5 +33,32 @@ namespace MyPortfolio.BlazorWasm.Endpoints
 
             return null;
         }
+
+        public async Task<string> GetPauloPdf()
+        {
+            try
+            {
+                var url = _client.BaseAddress + "/pdfgen/owner";
+
+                
+                var response = await _client.GetAsync(url);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var pdfBytes = await response.Content.ReadAsByteArrayAsync();
+                    var base64String = Convert.ToBase64String(pdfBytes);
+
+
+                    return base64String;
+                }
+            }
+
+            catch (Exception ex)
+            {
+
+            }
+
+            return string.Empty;
+        }
     }
 }
