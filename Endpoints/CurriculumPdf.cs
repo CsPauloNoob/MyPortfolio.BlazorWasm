@@ -10,7 +10,9 @@ namespace MyPortfolio.BlazorWasm.Endpoints
     {
         private readonly HttpClient _client = httpClientFactory.CreateClient(WebConfiguration.Name);
 
-        public async Task<Response<Curriculo_Completo?>> GetCurriculumPdf(Curriculo_Completo curriculo_Completo)
+
+
+        public async Task<string> GetCurriculumPdf(Curriculo_Completo curriculo_Completo)
         {
             try
             {
@@ -23,16 +25,26 @@ namespace MyPortfolio.BlazorWasm.Endpoints
 
                 var response = await _client.PostAsync(url, jsonContent);
 
-                response.StatusCode = System.Net.HttpStatusCode.OK;
+                if(response.IsSuccessStatusCode)
+                {
+                    var pdfBytes = await response.Content.ReadAsByteArrayAsync();
+                    var base64String = Convert.ToBase64String(pdfBytes);
+
+                    return base64String;
+                }
+
+                else return string.Empty;
             }
             
             catch (Exception ex)
             {
-
+                //Tratar exception
             }
 
             return null;
         }
+
+
 
         public async Task<string> GetPauloPdf()
         {
@@ -60,5 +72,7 @@ namespace MyPortfolio.BlazorWasm.Endpoints
 
             return string.Empty;
         }
+
+
     }
 }

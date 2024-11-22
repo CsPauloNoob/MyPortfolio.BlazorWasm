@@ -15,15 +15,10 @@ builder.Services.
     opt =>
     {
 #if DEBUG
-
-    opt.BaseAddress = new Uri("http://localhost:5260/V1/api");
-
-#else
-
-        opt.BaseAddress = new Uri("https://paulodev.azurewebsites.net/v1/api/");
-
+        opt.BaseAddress = new Uri("http://localhost:5260/V1/api");
 #endif
 
+        opt.BaseAddress = new Uri("https://paulodev.azurewebsites.net/v1/api/");
     });
 
 

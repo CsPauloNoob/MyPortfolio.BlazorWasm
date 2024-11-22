@@ -8,16 +8,16 @@
 
     public class Curriculo_Completo
     {
-        public Inicio_Curriculum Header { get; set; } = new();
+        public Inicio_Curriculum header { get; set; } = new();
 
-        public Contato Contato { get; set; } = new();
+        public Contato contato { get; set; } = new();
 
-        public List<CursosExtraModel> Cursos_Extra { get; set; } = new();
+        public List<Habilidades> habilidades { get; set; } = new();
 
-        public List<EducacaoModel> Formacao { get; set; } = new();
+        public List<CursosExtraModel?> cursos_Extra { get; set; } = new();
 
-        public List<Experiencia> ExpProfissional { get; set; } = new();
+        public List<EducacaoModel?> formacao { get; set; } = new();
 
-        public List<Habilidades> Habilidades {get; set;} = new();
+        public List<Experiencia?> expProfissional {get; set;} = new();
     }
 }

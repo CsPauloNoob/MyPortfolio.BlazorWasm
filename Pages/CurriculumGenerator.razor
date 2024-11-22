@@ -2,6 +2,7 @@
 @using System.Net.Http.Json
 @inject CurriculumPdf _curriculumPdf
 @layout LayoutAlternativo
+@inject IJSRuntime Js
 
 <div class="container">
     <h3>Gerador de currículo</h3>
@@ -123,6 +124,7 @@
             </div>
         }
         <button type="button" @onclick="AddExperiencia">Adicionar Experiência</button>
+        <button type="button" @onclick="PreencherCamposComExemplo">Preencher</button>
 
         <button type="submit">Enviar</button>
     </EditForm>
@@ -149,16 +151,18 @@
         if (editContext.Validate())
         {
             var curriculo = new Curriculo_Completo
-                {
-                    Contato = contato,
-                    Formacao = educacao,
-                    ExpProfissional = experiencias,
-                    Header = curriculumInicio,
-                    Habilidades = habilidade,
-                    Cursos_Extra = cursosExtra
-                };
+            {
+                contato = contato,
+                formacao = educacao,
+                expProfissional = experiencias,
+                header = curriculumInicio,
+                habilidades = habilidade,
+                cursos_Extra = cursosExtra
+            };
 
-            var obj = _curriculumPdf.GetCurriculumPdf(curriculo);
+            var curriculumbase64 = await _curriculumPdf.GetCurriculumPdf(curriculo);
+
+            await Js.InvokeVoidAsync("downloadFileFromStream", "Curriculo.pdf", curriculumbase64);
         }
     }
 
@@ -180,5 +184,35 @@
     private void AddHabilidade()
     {
         habilidade.Add(new Habilidades());
+    }
+
+
+    private void PreencherCamposComExemplo()
+    {
+        cursosExtra.Add(new CursosExtraModel());
+        educacao.Add(new EducacaoModel());
+        experiencias.Add(new Experiencia());
+        habilidade.Add(new Habilidades());
+
+        curriculumInicio.Nome = "João Silva";
+        curriculumInicio.PerfilProgramador = "Desenvolvedor .NET";
+        curriculumInicio.SobreMim = "Desenvolvedor com experiência em projetos freelances, especializado em aplicações desktop com Windows Forms.";
+
+        contato.Email = "joao.silva@example.com";
+        contato.Codigo = "+55";
+        contato.DDD = "92";
+        contato.NumeroTelefone_Celular = "912345678";
+
+        habilidade[0].Nome_Habilidade = "C#";
+        cursosExtra[0].Nome_Curso = "Curso de Blazor";
+        cursosExtra[0].Organizacao = "Online Academy";
+
+        educacao[0].Instituicao = "Universidade Federal do Amazonas";
+        educacao[0].Curso = "Ciência da Computação";
+        educacao[0].AnoConclusao = "2022";
+
+        experiencias[0].Nome_Organizacao = "Empresa XYZ";
+        experiencias[0].Funcao = "Desenvolvedor Júnior";
+        experiencias[0].Descricao = "Desenvolvimento de aplicações web utilizando .NET.";
     }
 }
