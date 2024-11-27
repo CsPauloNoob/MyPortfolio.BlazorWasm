@@ -16,13 +16,6 @@
 @code{
     private async Task RedirectToPdfGen()
     {
-
-        var byteBase64 = await pdf.GetPauloPdf();
-
-        await Js.InvokeVoidAsync("downloadFileFromStream", "Paulo.pdf", byteBase64);
-
-         var url = navigationManager.Uri + "curriculum-gen";
-         navigationManager.NavigateTo(url);
     }
 
     private void RedirectToHome()

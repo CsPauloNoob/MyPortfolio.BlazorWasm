@@ -1,77 +1,59 @@
-﻿
-.principal {
+﻿.principal {
     width: 100%;
-    padding: 20px 20% 0 20px;
-    overflow-y: auto;
-    height: 100vh;
+    padding: 20px 5%; /* Ajustando padding para telas menores */
+    height: 100%;
     color: #2C3E50;
-    margin-left: 16%;
+    margin-left: 0; /* Removendo margin para telas menores */
     margin-top: 52px;
     text-align: justify;
 }
 
 .lateral {
-    width: 16%;
-    height: 100%;
+    width: 100%; /* Fazendo o menu lateral ocupar 100% da largura em telas pequenas */
+    height: auto; /* Ajustando altura automaticamente */
     background-color: #6c757d;
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Alterando para row em telas pequenas */
     align-items: center;
     justify-content: center;
+    position: relative; /* Mudando para relativo em telas pequenas */
     top: 0;
     left: 0;
-    position: fixed;
 }
 
 .secoes {
     display: flex;
     width: 100%;
-    height: 33%;
+    height: auto;
     flex-direction: column;
     justify-content: center;
 }
 
-
-.resumo {
-    height: 70vh;
-    border-bottom: 1px solid black;
-}
-
-.experiencia {
-    border-bottom: 1px solid black;
-}
-
-.curso {
-    border-bottom: 1px solid black;
-}
-
-.educacao {
-    border-bottom: 1px solid black;
-}
-
-.conheci_tec {
-    border-bottom: 1px solid black;
-}
-
-.secoes ul {
-    padding: 0;
+.secoes ul li {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
     align-items: center;
-    list-style: none;
+    justify-content: center;
+    text-align: center; /* Centralizando texto em telas pequenas */
 }
 
-    .secoes ul li {
-        display: block;
-        width: 100%;
-        margin-top: 8px;
-        align-items: center;
-        justify-content: center;
+.secoes ul li a {
+    display: block;
+    text-align: center;
+}
+
+/* Media queries para telas maiores */
+@media (min-width: 768px) {
+    .principal {
+        padding: 20px 20% 0 20px;
+        margin-left: 16%;
     }
 
-        .secoes ul li a:hover {
-            background-color: red;
-        }
-
-        .secoes ul li a {
-            display: block;
-            text-align: center;
-        }
+    .lateral {
+        width: 16%;
+        height: 100%;
+        flex-direction: column;
+        position: fixed;
+    }
+}

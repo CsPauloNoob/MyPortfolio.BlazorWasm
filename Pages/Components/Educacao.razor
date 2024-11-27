@@ -3,11 +3,6 @@
     <h1>
         EDUCAÇÃO
     </h1>
-
-    @if(_paginaPaulo)
-    {
-
-        
         <div class="formacoes">
 
             <h2>
@@ -19,29 +14,5 @@
             </div>
 
         </div>
-    }
-
-    else
-    {
-        @foreach (var item in _educacao)
-        {
-            <h2>
-                @item.Curso
-            </h2>
-
-            <div class="descricao">
-                @item.Instituicao - @item.AnoConclusao
-            </div>
-        }
-    }
 
 </div>
-
-@code{
-
-    [Parameter]
-    public bool _paginaPaulo {get; set;}
-
-    [Parameter]
-    public List<EducacaoModel> _educacao {get; set;} = new();
-}

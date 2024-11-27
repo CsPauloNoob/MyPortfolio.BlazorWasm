@@ -1,0 +1,91 @@
+﻿/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #2C3E50;
+}
+
+
+
+h1 {
+    font-size: 38px;
+}
+
+#primeiro-nome {
+    margin: 38px 0 10px 0;
+}
+
+h2 {
+    color: slategrey;
+}
+
+.container {
+    padding: 20px;
+    margin: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.principal {
+    text-align: left;
+    padding: 20px;
+}
+
+.subtitulo {
+    font-style: italic;
+    color: #7F8C8D;
+    margin: 0 0 0 3px;
+}
+
+.coluna-skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .coluna-skills p {
+        flex: 1 1 45%;
+        margin: 5px 0;
+    }
+
+.experiencias, .formacoes, .cursos {
+    margin-top: 20px;
+}
+
+.descricao {
+    margin-top: 10px;
+    color: black;
+}
+
+/* Estilos de navegação lateral */
+.lateral {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #6c757d;
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .principal {
+        margin-left: 0;
+    }
+}
+
+.midias-sociais ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+    .midias-sociais ul li {
+        margin: 0 10px;
+    }
+
+        .midias-sociais ul li img {
+            width: 32px;
+            height: 32px;
+        }
