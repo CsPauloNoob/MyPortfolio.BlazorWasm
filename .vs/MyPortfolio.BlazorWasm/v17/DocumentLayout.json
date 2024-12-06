@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "E:\\Projetos\\MyPortfolio.BlazorWasm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|e:\\projetos\\myportfolio.blazorwasm\\pages\\components\\principal.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:pages\\components\\principal.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|E:\\Projetos\\MyPortfolio.BlazorWasm\\pages\\components\\paulo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:pages\\components\\paulo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|e:\\projetos\\myportfolio.blazorwasm\\pages\\components\\paulo.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|E:\\Projetos\\MyPortfolio.BlazorWasm\\pages\\components\\paulo.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:pages\\components\\paulo.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|E:\\Projetos\\MyPortfolio.BlazorWasm\\pages\\components\\principal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:pages\\components\\principal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|E:\\Projetos\\MyPortfolio.BlazorWasm\\pages\\components\\principal.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:pages\\components\\principal.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|e:\\projetos\\myportfolio.blazorwasm\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|e:\\projetos\\myportfolio.blazorwasm\\pages\\components\\menu_lateral.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:pages\\components\\menu_lateral.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|e:\\projetos\\myportfolio.blazorwasm\\pages\\components\\menu_lateral.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:pages\\components\\menu_lateral.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,54 +66,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Menu_lateral.razor",
+              "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Components\\Menu_lateral.razor",
+              "RelativeDocumentMoniker": "Pages\\Components\\Menu_lateral.razor",
+              "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Components\\Menu_lateral.razor",
+              "RelativeToolTip": "Pages\\Components\\Menu_lateral.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T02:31:11.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Menu_lateral.razor.css",
+              "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Components\\Menu_lateral.razor.css",
+              "RelativeDocumentMoniker": "Pages\\Components\\Menu_lateral.razor.css",
+              "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Components\\Menu_lateral.razor.css",
+              "RelativeToolTip": "Pages\\Components\\Menu_lateral.razor.css",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-06T02:31:04.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Layout\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "Layout\\NavMenu.razor.css",
+              "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Layout\\NavMenu.razor.css",
+              "RelativeToolTip": "Layout\\NavMenu.razor.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-06T02:29:16.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Paulo.razor.css",
               "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Components\\Paulo.razor.css",
               "RelativeDocumentMoniker": "Pages\\Components\\Paulo.razor.css",
               "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Components\\Paulo.razor.css",
               "RelativeToolTip": "Pages\\Components\\Paulo.razor.css",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAoAAAAIAAAA",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAAEQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-11-27T02:52:37.689Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Principal.razor.css",
               "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Components\\Principal.razor.css",
               "RelativeDocumentMoniker": "Pages\\Components\\Principal.razor.css",
               "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Components\\Principal.razor.css",
               "RelativeToolTip": "Pages\\Components\\Principal.razor.css",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACwAAAAAAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAE8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-11-23T22:53:53.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Principal.razor",
-              "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Components\\Principal.razor",
-              "RelativeDocumentMoniker": "Pages\\Components\\Principal.razor",
-              "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Components\\Principal.razor",
-              "RelativeToolTip": "Pages\\Components\\Principal.razor",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAqwBMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-23T22:49:37.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Paulo.razor",
-              "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Components\\Paulo.razor",
-              "RelativeDocumentMoniker": "Pages\\Components\\Paulo.razor",
-              "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Components\\Paulo.razor",
-              "RelativeToolTip": "Pages\\Components\\Paulo.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-23T21:37:24.627Z",
               "EditorCaption": ""
             }
           ]
