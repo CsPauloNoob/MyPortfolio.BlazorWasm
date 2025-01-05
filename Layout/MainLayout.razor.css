@@ -2,3 +2,44 @@
     background-color: #F5F5F5;
     display: flex;
 }
+
+
+.drawer {
+    background-color: #e3f2fd; /* Azul suave */
+    color: #333; /* Cor de texto escura para contraste */
+}
+
+.foto {
+    display: flex;
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 80px;
+}
+
+
+.secoes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
+    text-align: center;
+}
+
+.secoes a {
+    text-decoration: none;
+    color: #2F4F4F;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.secoes a:hover {
+    color: #B8860B; /* Cor ao passar o mouse */
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave */
+}
