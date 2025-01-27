@@ -1,14 +1,7 @@
-﻿@* @inherits LayoutComponentBase
-
-<NavMenu></NavMenu>
-<div class="page">
-    @Body
-</div> *@
-
-
-
+﻿
 
 @inherits LayoutComponentBase
+@inject NavigationManager navigation;
 
 <MudThemeProvider />
 <MudPopoverProvider />
@@ -16,15 +9,22 @@
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudAppBar Style="align-items: end">
-        <MudText>Curriculum: </MudText>
-        <MudIconButton Size="Size.Large" Icon="@Icons.Custom.FileFormats.FileDocument" Style="color: white"></MudIconButton>
+    <MudAppBar>
+
+        <MudButton OnClick="GoToProjeto" EndIcon="@Icons.Custom.Uncategorized.Folder">
+            Projetos
+        </MudButton>
+        <MudButton Size="Size.Large" EndIcon="@Icons.Custom.FileFormats.FilePdf" Style="color: white">
+            Currículo
+        </MudButton>
+
     </MudAppBar>
-    <MudDrawer Open="true" Class="drawer" Width="250px" Elevation="5">
+
+    <MudDrawer Open="@MenuLatAtivado" Class="drawer" Width="250px" Elevation="5">
 
 
-        <MudDrawerHeader>
-            <MudImage Src="https://i.imgur.com/nSHtdWs.jpeg" ObjectFit="ObjectFit.Contain" Fluid="true" class="pa-2 mb-16 mt-8 rounded-circle"></MudImage>
+        <MudDrawerHeader Style="align-items:center">
+            <MudImage Src="https://i.imgur.com/nSHtdWs.jpeg" ObjectFit="ObjectFit.Cover" Fluid="true" class="pa-2 mb-16 mt-8 rounded-circle"></MudImage>
         </MudDrawerHeader>
 
 
@@ -56,3 +56,15 @@
     </MudMainContent>
 </MudLayout>
 
+
+@code
+{
+    public bool MenuLatAtivado = true;
+
+    public void GoToProjeto()
+    {
+        navigation.NavigateTo("Projetos");
+        MenuLatAtivado = false;
+    }
+
+}
