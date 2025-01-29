@@ -1,7 +1,50 @@
 ﻿@page "/Projetos"
 
-<MudText Typo="Typo.h2" Align="Align.Center">Projetos e Portfolio</MudText>
+
+<MudText Typo="Typo.h3">Projetos e Portfolio</MudText>
+
+<MudContainer Gutters="false" Class="mt-12 d-flex">
+    @if(MeusProjetos.Any())
+    {
+        @foreach(var proj in MeusProjetos)
+        { 
+            <MudCard Elevation="3" Outlined="true" Class="ma-2" Style="border-color:black">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h5">@proj.Name</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+
+                <MudPaper Elevation="3" Class="d-flex">
+                    <MudCardContent>
+                        <MudText Typo="Typo.body1">
+                            @proj.Description
+                        </MudText>
+                        <MudSpacer />
+                        <MudText Color="Color.Secondary">@proj.Author</MudText>
+                    </MudCardContent>
+                </MudPaper>
+
+
+                <MudCardActions Class="d-flex align-center justify-center">
+                    <MudIconButton 
+                        Icon="@Icons.Custom.Brands.GitHub"
+                        Edge="Edge.False" Href="@proj.Link"
+                        Class="align-self-center"/>
+                </MudCardActions>
+
+            </MudCard>
+        }
+    }
+</MudContainer>
 
 @code {
+    public List<RepositorioGithub> MeusProjetos { get; private set; } = new();
 
+    protected override async Task OnParametersSetAsync()
+    {
+        List<RepositorioGithub> repositorios = new RepositorioGithub().DefaultProjetos();
+
+        MeusProjetos = repositorios;
+    }
 }

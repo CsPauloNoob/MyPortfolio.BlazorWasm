@@ -7,6 +7,7 @@
 .drawer {
     background-color: #e3f2fd; /* Azul suave */
     color: #333; /* Cor de texto escura para contraste */
+    visibility:collapse;
 }
 
 .foto {
