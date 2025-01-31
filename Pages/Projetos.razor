@@ -1,13 +1,13 @@
 ﻿@page "/Projetos"
 
+<MudText Align="Align.Center" Class="mb-8" Typo="Typo.h3">Projetos e Portfólio</MudText>
 
-<MudText Typo="Typo.h3">Projetos e Portfolio</MudText>
-
-<MudContainer Gutters="false" Class="mt-12 d-flex">
+<MudGrid Class="">
     @if(MeusProjetos.Any())
     {
         @foreach(var proj in MeusProjetos)
         { 
+            <MudItem xs="6">
             <MudCard Elevation="3" Outlined="true" Class="ma-2" Style="border-color:black">
                 <MudCardHeader>
                     <CardHeaderContent>
@@ -21,22 +21,24 @@
                             @proj.Description
                         </MudText>
                         <MudSpacer />
-                        <MudText Color="Color.Secondary">@proj.Author</MudText>
+                        <MudText Color="Color.Success">@proj.Author</MudText>
                     </MudCardContent>
                 </MudPaper>
 
 
                 <MudCardActions Class="d-flex align-center justify-center">
-                    <MudIconButton 
+                    <MudIconButton
                         Icon="@Icons.Custom.Brands.GitHub"
                         Edge="Edge.False" Href="@proj.Link"
-                        Class="align-self-center"/>
+                        Class="align-self-center"
+                        Target="_blank"/>
                 </MudCardActions>
 
             </MudCard>
+            </MudItem>
         }
     }
-</MudContainer>
+</MudGrid>
 
 @code {
     public List<RepositorioGithub> MeusProjetos { get; private set; } = new();

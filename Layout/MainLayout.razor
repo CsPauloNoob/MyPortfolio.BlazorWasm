@@ -1,6 +1,5 @@
 ﻿@inherits LayoutComponentBase
 @inject NavigationManager navigation;
-@inject DrawerState drawerState;
 
 <MudThemeProvider />
 <MudPopoverProvider />
@@ -8,19 +7,11 @@
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudAppBar>
+    
 
-        <MudButton  OnClick="GoToProjeto" EndIcon="@Icons.Custom.Uncategorized.Folder">
-            Projetos
-        </MudButton>
-        <MudSpacer />
-        <MudButton Size="Size.Large" EndIcon="@Icons.Custom.FileFormats.FilePdf" Style="color: white; margin-left: auto;">
-            Currículo
-        </MudButton>
+    <NavMenu/>
 
-    </MudAppBar>
-
-    <MudDrawer Open="@drawerState.IsOpen" class="drawer" Width="250px" Elevation="5">
+    @* <MudDrawer Open="@drawerState.IsOpen" class="drawer" Width="250px" Elevation="5">
 
 
         <MudDrawerHeader Style="align-items:center">
@@ -48,7 +39,7 @@
                 </ul>
             </MudPaper>
         </MudDrawerContainer>
-    </MudDrawer>
+    </MudDrawer> *@
 
     <MudMainContent>
         @Body
@@ -56,14 +47,3 @@
 </MudLayout>
 
 
-@code
-{
-    //public bool MenuLatAtivado = true;
-
-    public void GoToProjeto()
-    {
-        navigation.NavigateTo("Projetos");
-        drawerState.IsOpen = false;
-    }
-
-}

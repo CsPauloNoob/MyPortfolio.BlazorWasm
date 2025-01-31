@@ -1,5 +1,27 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager navigation;
 
-<div class="page">
-    @Body
-</div>
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar>
+        <MudButton OnClick="Voltar" EndIcon="@Icons.Material.Filled.ArrowBack">
+            Voltar
+        </MudButton>
+        <MudSpacer />
+        <MudButton Size="Size.Large" EndIcon="@Icons.Custom.FileFormats.FilePdf" Style="color: white; margin-left: auto;">
+            Currículo
+        </MudButton>
+    </MudAppBar>
+
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    void Voltar() => navigation.NavigateTo("/");
+}

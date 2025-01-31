@@ -20,21 +20,31 @@
                 new RepositorioGithub
                 {
                     Id = 0,
-                    Name = "API de gerenciamento escolar",
-                    Description = "API de gerenciamento escolar. Desenvolvido em .NET 6, sistema conta com separação de camadas e autenticação de usuário com Identity",
+                    Name = "API de gerenciamento de currículos",
+                    Description = "Uma API para gerenciar curriculos com funcionalidades de autenticação segura com Identity e geração de curriculos em PDF formatados. Desenvolvido com .NET 6.",
                     Author = "Paulo Sérgio",
-                    Link = "https://google.com"
+                    Link = "https://github/CsPauloNoob/MyPortfolio"
 
                 },                
 
                 new RepositorioGithub
                 {
                     Id = 1,
-                    Name = "API de gerenciamento escolar",
-                    Description = "API de gerenciamento escolar. Desenvolvido em .NET 6, sistema conta com separação de camadas e autenticação de usuário com Identity",
-                    Author = "Paulo Sérgio",
-                    Link = "https://google.com"
+                    Name = "mini-ERP de gerenciamento escolar",
+                    Description = "Sistema pequeno de gerenciamento escolar. Aplicação de console com autenticação e acesso a dados. Atualmente rodando com .NET 8",
+                    Author = "Os-Derivados",
+                    Link = "https://github/Os-Derivados/college-management"
                     
+                },
+
+                new RepositorioGithub
+                {
+                    Id = 1,
+                    Name = "Site de exposição de currículo e portfólio",
+                    Description = "Site para expor curriculo e portfólio, desenvolvido com Blazor Web Asembly e C#.",
+                    Author = "Paulo Sérgio",
+                    Link = "https://github/CsPauloNoob/MyPortfolio.BlazorWasm"
+
                 }
             };
 

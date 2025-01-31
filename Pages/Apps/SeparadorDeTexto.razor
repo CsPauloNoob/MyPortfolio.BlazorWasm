@@ -1,0 +1,37 @@
+﻿@page "/separadortxt"
+
+<PageTitle>Separador de Texto</PageTitle>
+
+<MudContainer Fixed Class="ml-0" Style="width: 50%;">
+    <MudTextField 
+        AutoGrow 
+        MaxLines="10" 
+        T="string"
+        Counter="0"
+        Clearable
+        Label="Texto a ser separado"
+        Class="mt-6"/>
+
+    <MudTextField 
+        Label="Máximo de caracteres por parte" 
+        T="int"
+        MaxLength="5"
+        Class="mt-6"/>
+
+    <MudTextField 
+        T="string" 
+        Label="Resultado"
+        AutoGrow MaxLines="15"
+        Class="mt-6"
+        Disabled="@TextoSeparado"/>
+
+    <MudButton 
+        Color="Color.Success"/>
+</MudContainer>
+
+@code
+{
+    private bool TextoSeparado = false;
+
+
+}
