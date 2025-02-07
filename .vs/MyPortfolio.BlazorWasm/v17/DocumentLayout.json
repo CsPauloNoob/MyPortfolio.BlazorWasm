@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:pages\\apps\\separadordetexto.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|c:\\users\\paulo\\documents\\repos\\myportfolio.blazorwasm\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|c:\\users\\paulo\\documents\\repos\\myportfolio.blazorwasm\\wwwroot\\js\\jsfuncs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:wwwroot\\js\\jsfuncs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 264,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,28 +58,27 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JsFuncs.js",
+              "DocumentMoniker": "C:\\Users\\Paulo\\Documents\\repos\\MyPortfolio.BlazorWasm\\wwwroot\\Js\\JsFuncs.js",
+              "RelativeDocumentMoniker": "wwwroot\\Js\\JsFuncs.js",
+              "ToolTip": "C:\\Users\\Paulo\\Documents\\repos\\MyPortfolio.BlazorWasm\\wwwroot\\Js\\JsFuncs.js",
+              "RelativeToolTip": "wwwroot\\Js\\JsFuncs.js",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAA0AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-06T20:49:45.77Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SeparadorDeTexto.razor",
               "DocumentMoniker": "C:\\Users\\Paulo\\Documents\\repos\\MyPortfolio.BlazorWasm\\Pages\\Apps\\SeparadorDeTexto.razor",
               "RelativeDocumentMoniker": "Pages\\Apps\\SeparadorDeTexto.razor",
               "ToolTip": "C:\\Users\\Paulo\\Documents\\repos\\MyPortfolio.BlazorWasm\\Pages\\Apps\\SeparadorDeTexto.razor",
               "RelativeToolTip": "Pages\\Apps\\SeparadorDeTexto.razor",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABIAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAIEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-30T20:45:27.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\Paulo\\Documents\\repos\\MyPortfolio.BlazorWasm\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\Paulo\\Documents\\repos\\MyPortfolio.BlazorWasm\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-30T20:36:45.82Z",
+              "WhenOpened": "2025-02-03T15:03:25.006Z",
               "EditorCaption": ""
             }
           ]

@@ -1,37 +1,130 @@
 ﻿@page "/separadortxt"
+@inject IJSRuntime JsRuntime
+@inject ISnackbar SnackBarHelper
+@using System.Text
 
 <PageTitle>Separador de Texto</PageTitle>
 
 <MudContainer Fixed Class="ml-0" Style="width: 50%;">
     <MudTextField 
-        AutoGrow 
-        MaxLines="10" 
-        T="string"
-        Counter="0"
-        Clearable
-        Label="Texto a ser separado"
-        Class="mt-6"/>
+    AutoGrow 
+    MaxLines="10" 
+    T="string"
+    Counter="0"
+    @bind-Value = "@RawText"
+    Clearable
+    Label="Texto a ser separado"
+    Class="mt-6"/>
 
     <MudTextField 
-        Label="Máximo de caracteres por parte" 
-        T="int"
-        MaxLength="5"
-        Class="mt-6"/>
+    Label="Máximo de caracteres por parte" 
+    T="int"
+    @bind-Value = "@MaximoCaracteres"
+    MaxLength="5"
+    Class="mt-6"/>
 
-    <MudTextField 
-        T="string" 
-        Label="Resultado"
-        AutoGrow MaxLines="15"
-        Class="mt-6"
-        Disabled="@TextoSeparado"/>
+    <MudButton Color="Color.Success"
+    OnClick="SepararTexto"
+    Variant="Variant.Outlined"
+    Style="align-self: end">
+        Separar Texto
+    </MudButton>
 
-    <MudButton 
-        Color="Color.Success"/>
 </MudContainer>
+
+@if (TextoSeparado.Any())
+{
+    <MudContainer Style="width: 90%"> 
+        @*         @foreach (string texto in TextoSeparado)
+        {
+            <MudTextField T="string"
+            Label="Resultado"
+            AutoGrow MaxLines="15"
+            Value="@texto"
+            Class="mt-8 mb-8"
+            ReadOnly
+            />
+
+            <MudSpacer/>
+        } *@
+        <MudGrid Class="mt-6 ml-2">
+            @for(var x = 0; x < @TextoSeparado.Count; x++)
+            {
+                var uniqueId = $"mudtxt_{Guid.NewGuid()}";
+                <MudSpacer></MudSpacer>
+                <MudTextField T="string"
+                AutoGrow MaxLines="15"
+                id="@uniqueId"
+                @key="uniqueId"
+                Value="@TextoSeparado[@x]"
+                Class="ma-4"
+                Label="@x.ToString()"
+                Style="border:dashed;"
+                ReadOnly @onclick="()=> CopiarClipBoard(uniqueId)"/>
+            }
+        </MudGrid>
+
+    </MudContainer>
+
+}
+
 
 @code
 {
-    private bool TextoSeparado = false;
 
+    private string RawText { get; set; }
+    private int MaximoCaracteres { get; set; }
+
+    private List<string> TextoSeparado { get; set; } = new();
+
+    private int TextoSelecionado { get; set; }
+
+    private void SepararTexto()
+    {
+        string[] palavras = RawText.Split(' ');
+        List<string> resultado = new();
+        StringBuilder parteAtual = new StringBuilder();
+        int contador = 1;
+        foreach (string palavra in palavras)
+        {
+            if (parteAtual.Length + palavra.Length + 1 > MaximoCaracteres)
+            {
+                resultado.Add(parteAtual.ToString().Trim());
+                parteAtual.Clear();
+            }
+
+            if (palavra.Length > MaximoCaracteres)
+            {
+                if (parteAtual.Length > 0)
+                {
+                    resultado.Add(parteAtual.ToString().Trim());
+                    parteAtual.Clear();
+                }
+
+                resultado.Add(palavra);
+            }
+            else
+            {
+                parteAtual.Append(palavra + " ");
+            }
+
+        }
+
+        if (parteAtual.Length > 0)
+            resultado.Add(parteAtual.ToString().Trim());
+
+        TextoSeparado = resultado;
+    }
+
+    private async Task CopiarClipBoard(string id)
+    {
+        await JsRuntime.InvokeVoidAsync("copiarTexto", id);
+
+        SnackBarHelper.Clear();
+
+        SnackBarHelper.Configuration.PositionClass = Defaults.Classes.Position.BottomCenter;
+
+        SnackBarHelper.Add("Texto Copiado!");
+    }
 
 }
