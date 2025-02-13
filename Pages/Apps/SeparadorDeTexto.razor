@@ -26,7 +26,7 @@
     <MudButton Color="Color.Success"
     OnClick="SepararTexto"
     Variant="Variant.Outlined"
-    Style="align-self: end">
+    Class="mt-6">
         Separar Texto
     </MudButton>
 
@@ -35,18 +35,6 @@
 @if (TextoSeparado.Any())
 {
     <MudContainer Style="width: 90%"> 
-        @*         @foreach (string texto in TextoSeparado)
-        {
-            <MudTextField T="string"
-            Label="Resultado"
-            AutoGrow MaxLines="15"
-            Value="@texto"
-            Class="mt-8 mb-8"
-            ReadOnly
-            />
-
-            <MudSpacer/>
-        } *@
         <MudGrid Class="mt-6 ml-2">
             @for(var x = 0; x < @TextoSeparado.Count; x++)
             {
@@ -81,6 +69,24 @@
 
     private void SepararTexto()
     {
+        
+        if (RawText is null)
+        {
+            ShowSnackBar("Texto muio curto!", Severity.Error);
+
+            return;
+        }
+
+        if(MaximoCaracteres < 300)
+        {
+            ShowSnackBar(
+                "O texto deve ter partes minimas de 300 caracteres"
+                , Severity.Error);
+
+            return;
+        }
+
+
         string[] palavras = RawText.Split(' ');
         List<string> resultado = new();
         StringBuilder parteAtual = new StringBuilder();
@@ -120,11 +126,17 @@
     {
         await JsRuntime.InvokeVoidAsync("copiarTexto", id);
 
+        ShowSnackBar("Texto Copiado!");
+    }
+
+
+    private void ShowSnackBar(string menssagem, Severity tipo = Severity.Normal)
+    {
         SnackBarHelper.Clear();
 
         SnackBarHelper.Configuration.PositionClass = Defaults.Classes.Position.BottomCenter;
 
-        SnackBarHelper.Add("Texto Copiado!");
+        SnackBarHelper.Add(menssagem, tipo);
     }
 
 }
