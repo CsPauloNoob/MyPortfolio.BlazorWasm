@@ -6,17 +6,33 @@
     Size="Size.Medium"
     Color="Color.Dark"
     Icon="@Icons.Material.TwoTone.List">
+        <MudMenuItem 
+            Icon="@Icons.Material.Outlined.Home"
+            OnClick="IrParaHome">Inicio</MudMenuItem>
 
-        <MudMenuItem OnClick="GoToSeparadorTxt">Separador De texto</MudMenuItem>
         <MudDivider />
 
-        <MudMenuItem>App X</MudMenuItem>
+        <MudMenuItem
+            Icon="@Icons.Material.Outlined.TextFields"
+            OnClick="GoToSeparadorTxt">Separador De texto</MudMenuItem>
+
+        <MudDivider />
+
+        <MudMenuItem 
+            Icon="@Icons.Material.Outlined.Gamepad"
+            OnClick="IrParaGamingReport">GamingRank</MudMenuItem>
+
+        <MudDivider/>
     </MudMenu>
 
     <MudSpacer />
-    <MudButton OnClick="GoToProjeto" EndIcon="@Icons.Custom.Uncategorized.Folder">
+    <MudButton 
+    OnClick="GoToProjeto"
+    Style="color: white"
+    EndIcon="@Icons.Custom.Uncategorized.Folder">
         Projetos
     </MudButton>
+
     <MudButton Size="Size.Large" EndIcon="@Icons.Custom.FileFormats.FilePdf" Style="color: white; margin-left: auto;">
         Currículo
     </MudButton>
@@ -25,12 +41,24 @@
 
 @code
 {
-    public void GoToProjeto()
+
+    void GoToProjeto()
     {
         navigation.NavigateTo("Projetos");
     }
-    public void GoToSeparadorTxt()
+
+    void GoToSeparadorTxt()
     {
         navigation.NavigateTo("separadortxt");
+    }
+
+    void IrParaHome()
+    {
+        navigation.NavigateTo("/");
+    }
+
+    void IrParaGamingReport()
+    {
+        navigation.NavigateTo("gamingreport");
     }
 }
