@@ -23,7 +23,7 @@
                     Name = "API de gerenciamento de currículos",
                     Description = "Uma API para gerenciar curriculos com funcionalidades de autenticação segura com Identity e geração de curriculos em PDF formatados. Desenvolvido com .NET 6.",
                     Author = "Paulo Sérgio",
-                    Link = "https://github/CsPauloNoob/MyPortfolio"
+                    Link = "https://github.com/CsPauloNoob/MyPortfolio"
 
                 },                
 
@@ -33,7 +33,7 @@
                     Name = "mini-ERP de gerenciamento escolar",
                     Description = "Sistema pequeno de gerenciamento escolar. Aplicação de console com autenticação e acesso a dados. Atualmente rodando com .NET 8",
                     Author = "Os-Derivados",
-                    Link = "https://github/Os-Derivados/college-management"
+                    Link = "https://github.com/Os-Derivados/college-management"
                     
                 },
 
@@ -43,7 +43,7 @@
                     Name = "Site de exposição de currículo e portfólio",
                     Description = "Site para expor curriculo e portfólio, desenvolvido com Blazor Web Asembly e C#.",
                     Author = "Paulo Sérgio",
-                    Link = "https://github/CsPauloNoob/MyPortfolio.BlazorWasm"
+                    Link = "https://github.com/CsPauloNoob/MyPortfolio.BlazorWasm"
 
                 }
             };
