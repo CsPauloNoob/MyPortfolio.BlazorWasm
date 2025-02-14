@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Paulo\\Documents\\repos\\MyPortfolio.BlazorWasm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|c:\\users\\paulo\\documents\\repos\\myportfolio.blazorwasm\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|c:\\users\\paulo\\documents\\repos\\myportfolio.blazorwasm\\pages\\apps\\gamingreport.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:pages\\apps\\gamingreport.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|c:\\users\\paulo\\documents\\repos\\myportfolio.blazorwasm\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,14 +59,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\Paulo\\Documents\\repos\\MyPortfolio.BlazorWasm\\Pages\\Index.razor",
-              "RelativeDocumentMoniker": "Pages\\Index.razor",
-              "ToolTip": "C:\\Users\\Paulo\\Documents\\repos\\MyPortfolio.BlazorWasm\\Pages\\Index.razor",
-              "RelativeToolTip": "Pages\\Index.razor",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABAAAABsAAAAAAAAAA==",
+              "Title": "GamingReport.razor",
+              "DocumentMoniker": "C:\\Users\\Paulo\\Documents\\repos\\MyPortfolio.BlazorWasm\\Pages\\Apps\\GamingReport.razor",
+              "RelativeDocumentMoniker": "Pages\\Apps\\GamingReport.razor",
+              "ToolTip": "C:\\Users\\Paulo\\Documents\\repos\\MyPortfolio.BlazorWasm\\Pages\\Apps\\GamingReport.razor",
+              "RelativeToolTip": "Pages\\Apps\\GamingReport.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T15:31:07.386Z",
+              "WhenOpened": "2025-02-13T20:52:53.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Paulo\\Documents\\repos\\MyPortfolio.BlazorWasm\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Paulo\\Documents\\repos\\MyPortfolio.BlazorWasm\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T20:02:50.028Z",
               "EditorCaption": ""
             }
           ]
