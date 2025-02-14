@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "E:\\Projetos\\MyPortfolio.BlazorWasm\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|e:\\projetos\\myportfolio.blazorwasm\\models\\repositoriogithub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:models\\repositoriogithub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|e:\\projetos\\myportfolio.blazorwasm\\pages\\projetos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:pages\\projetos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|e:\\projetos\\myportfolio.blazorwasm\\pages\\apps\\separadordetexto.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A75A0F9B-17E5-4D51-854B-937C29B7A315}|MyPortfolio.BlazorWasm.csproj|solutionrelative:pages\\apps\\separadordetexto.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -51,12 +59,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "RepositorioGithub.cs",
+              "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Models\\RepositorioGithub.cs",
+              "RelativeDocumentMoniker": "Models\\RepositorioGithub.cs",
+              "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Models\\RepositorioGithub.cs",
+              "RelativeToolTip": "Models\\RepositorioGithub.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T01:41:48.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Projetos.razor",
+              "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Projetos.razor",
+              "RelativeDocumentMoniker": "Pages\\Projetos.razor",
+              "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Projetos.razor",
+              "RelativeToolTip": "Pages\\Projetos.razor",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T01:40:28.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "SeparadorDeTexto.razor",
               "DocumentMoniker": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Apps\\SeparadorDeTexto.razor",
               "RelativeDocumentMoniker": "Pages\\Apps\\SeparadorDeTexto.razor",
               "ToolTip": "E:\\Projetos\\MyPortfolio.BlazorWasm\\Pages\\Apps\\SeparadorDeTexto.razor",
               "RelativeToolTip": "Pages\\Apps\\SeparadorDeTexto.razor",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAG8AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAHQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-13T01:14:56.192Z",
               "EditorCaption": ""
