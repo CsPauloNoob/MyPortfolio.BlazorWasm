@@ -60,7 +60,7 @@
 @code
 {
 
-    private string RawText { get; set; }
+    private string RawText { get; set; } = string.Empty;
     private int MaximoCaracteres { get; set; }
 
     private List<string> TextoSeparado { get; set; } = new();
@@ -90,7 +90,6 @@
         string[] palavras = RawText.Split(' ');
         List<string> resultado = new();
         StringBuilder parteAtual = new StringBuilder();
-        int contador = 1;
         foreach (string palavra in palavras)
         {
             if (parteAtual.Length + palavra.Length + 1 > MaximoCaracteres)

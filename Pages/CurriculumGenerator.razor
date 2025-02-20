@@ -4,7 +4,7 @@
 @layout LayoutAlternativo
 @inject IJSRuntime Js
 
-<div class="container">
+@* <div class="container">
     <h3>Gerador de currículo</h3>
     <EditForm EditContext="editContext" OnValidSubmit="SubmitForm">
         <DataAnnotationsValidator />
@@ -32,26 +32,6 @@
             <label>Email:</label>
             <InputText @bind-Value="contato.Email" />
         </div>
-@*         <div>
-            <label>Rua:</label>
-            <InputText @bind-Value="contato.Rua" />
-        </div>
-        <div>
-            <label>Bairro:</label>
-            <InputText @bind-Value="contato.Bairro" />
-        </div>
-        <div>
-            <label>Numero da Casa:</label>
-            <InputText @bind-Value="contato.NumeroCasa" />
-        </div>
-        <div>
-            <label>Cidade:</label>
-            <InputText @bind-Value="contato.Cidade" />
-        </div>
-        <div>
-            <label>Estado:</label>
-            <InputText @bind-Value="contato.Estado" />
-        </div> *@
         <div>
             <label>Codigo:</label>
             <InputText @bind-Value="contato.Codigo" />
@@ -128,91 +108,91 @@
 
         <button type="submit">Enviar</button>
     </EditForm>
-</div>
+</div> *@
 
 
 @code {
-    private Contato contato = new();
-    private Inicio_Curriculum curriculumInicio = new();
-    private List<CursosExtraModel> cursosExtra = new();
-    private List<Habilidades> habilidade = new();
-    private List<EducacaoModel> educacao = new();
-    private List<Experiencia> experiencias = new();
+    // private Contato contato = new();
+    // private Inicio_Curriculum curriculumInicio = new();
+    // private List<CursosExtraModel> cursosExtra = new();
+    // private List<Habilidades> habilidade = new();
+    // private List<EducacaoModel> educacao = new();
+    // private List<Experiencia> experiencias = new();
 
-    private EditContext editContext;
+    // private EditContext editContext;
 
-    protected override void OnInitialized()
-    {
-        editContext = new EditContext(this);
-    }
+    // protected override void OnInitialized()
+    // {
+    //     editContext = new EditContext(this);
+    // }
 
-    private async Task SubmitForm()
-    {
-        if (editContext.Validate())
-        {
-            var curriculo = new Curriculo_Completo
-            {
-                contato = contato,
-                formacao = educacao,
-                expProfissional = experiencias,
-                header = curriculumInicio,
-                habilidades = habilidade,
-                cursos_Extra = cursosExtra
-            };
+    // private async Task SubmitForm()
+    // {
+    //     if (editContext.Validate())
+    //     {
+    //         var curriculo = new Curriculo_Completo
+    //         {
+    //             contato = contato,
+    //             formacao = educacao,
+    //             expProfissional = experiencias,
+    //             header = curriculumInicio,
+    //             habilidades = habilidade,
+    //             cursos_Extra = cursosExtra
+    //         };
 
-            var curriculumbase64 = await _curriculumPdf.GetCurriculumPdf(curriculo);
+    //         var curriculumbase64 = await _curriculumPdf.GetCurriculumPdf(curriculo);
 
-            await Js.InvokeVoidAsync("downloadFileFromStream", "Curriculo.pdf", curriculumbase64);
-        }
-    }
+    //         await Js.InvokeVoidAsync("downloadFileFromStream", "Curriculo.pdf", curriculumbase64);
+    //     }
+    // }
 
-    private void AddCursoExtra()
-    {
-        cursosExtra.Add(new CursosExtraModel());
-    }
+    // private void AddCursoExtra()
+    // {
+    //     cursosExtra.Add(new CursosExtraModel());
+    // }
 
-    private void AddEducacao()
-    {
-        educacao.Add(new EducacaoModel());
-    }
+    // private void AddEducacao()
+    // {
+    //     educacao.Add(new EducacaoModel());
+    // }
 
-    private void AddExperiencia()
-    {
-        experiencias.Add(new Experiencia());
-    }
+    // private void AddExperiencia()
+    // {
+    //     experiencias.Add(new Experiencia());
+    // }
 
-    private void AddHabilidade()
-    {
-        habilidade.Add(new Habilidades());
-    }
+    // private void AddHabilidade()
+    // {
+    //     habilidade.Add(new Habilidades());
+    // }
 
 
-    private void PreencherCamposComExemplo()
-    {
-        cursosExtra.Add(new CursosExtraModel());
-        educacao.Add(new EducacaoModel());
-        experiencias.Add(new Experiencia());
-        habilidade.Add(new Habilidades());
+    // private void PreencherCamposComExemplo()
+    // {
+    //     cursosExtra.Add(new CursosExtraModel());
+    //     educacao.Add(new EducacaoModel());
+    //     experiencias.Add(new Experiencia());
+    //     habilidade.Add(new Habilidades());
 
-        curriculumInicio.Nome = "João Silva";
-        curriculumInicio.PerfilProgramador = "Desenvolvedor .NET";
-        curriculumInicio.SobreMim = "Desenvolvedor com experiência em projetos freelances, especializado em aplicações desktop com Windows Forms.";
+    //     curriculumInicio.Nome = "João Silva";
+    //     curriculumInicio.PerfilProgramador = "Desenvolvedor .NET";
+    //     curriculumInicio.SobreMim = "Desenvolvedor com experiência em projetos freelances, especializado em aplicações desktop com Windows Forms.";
 
-        contato.Email = "joao.silva@example.com";
-        contato.Codigo = "+55";
-        contato.DDD = "92";
-        contato.NumeroTelefone_Celular = "912345678";
+    //     contato.Email = "joao.silva@example.com";
+    //     contato.Codigo = "+55";
+    //     contato.DDD = "92";
+    //     contato.NumeroTelefone_Celular = "912345678";
 
-        habilidade[0].Nome_Habilidade = "C#";
-        cursosExtra[0].Nome_Curso = "Curso de Blazor";
-        cursosExtra[0].Organizacao = "Online Academy";
+    //     habilidade[0].Nome_Habilidade = "C#";
+    //     cursosExtra[0].Nome_Curso = "Curso de Blazor";
+    //     cursosExtra[0].Organizacao = "Online Academy";
 
-        educacao[0].Instituicao = "Universidade Federal do Amazonas";
-        educacao[0].Curso = "Ciência da Computação";
-        educacao[0].AnoConclusao = "2022";
+    //     educacao[0].Instituicao = "Universidade Federal do Amazonas";
+    //     educacao[0].Curso = "Ciência da Computação";
+    //     educacao[0].AnoConclusao = "2022";
 
-        experiencias[0].Nome_Organizacao = "Empresa XYZ";
-        experiencias[0].Funcao = "Desenvolvedor Júnior";
-        experiencias[0].Descricao = "Desenvolvimento de aplicações web utilizando .NET.";
-    }
+    //     experiencias[0].Nome_Organizacao = "Empresa XYZ";
+    //     experiencias[0].Funcao = "Desenvolvedor Júnior";
+    //     experiencias[0].Descricao = "Desenvolvimento de aplicações web utilizando .NET.";
+    // }
 }
