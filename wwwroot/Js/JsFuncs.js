@@ -1,8 +1,17 @@
-﻿async function downloadFileFromStream(filename, byteBase64) {
+﻿//async function downloadFileFromStream(filename, byteBase64) {
+//    var link = document.createElement('a');
+//    link.href = 'data:application/pdf;base64,' + byteBase64;
+//    link.download = filename;
+//    link.click();
+//}
+
+function downloadFileFromUrl(filename, url) {
     var link = document.createElement('a');
-    link.href = 'data:application/pdf;base64,' + byteBase64;
+    link.href = url;
     link.download = filename;
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
 }
 
 window.copiarTexto = (id) => {
@@ -15,12 +24,3 @@ window.copiarTexto = (id) => {
     }
 }
 
-
-//async function copyToClipBoard(text)
-//{
-//    navigator.clipboard.writeText(text).then(() => {
-//        console.log("Copiado!");
-//    }).catch(err => {
-//        console.error("Erro ao copiar o texto", err);
-//    });
-//}
