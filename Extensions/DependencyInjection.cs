@@ -6,7 +6,6 @@ namespace MyPortfolio.BlazorWasm.Extensions
     {
         public static void injectDependences(this IServiceCollection services)
         {
-            services.AddTransient<CurriculumHeader>();
             services.AddTransient<CurriculumPdf>();
         }
     }
