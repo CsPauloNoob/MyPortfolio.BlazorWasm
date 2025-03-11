@@ -24,9 +24,9 @@
     Class="mt-6"/>
 
     <MudButton Color="Color.Success"
-    OnClick="SepararTexto"
-    Variant="Variant.Outlined"
-    Class="mt-6">
+               OnClick="SepararTexto"
+               Variant="Variant.Outlined"
+               Class="mt-6">
         Separar Texto
     </MudButton>
 
@@ -72,7 +72,8 @@
         
         if (RawText is null)
         {
-            ShowSnackBar("Texto muio curto!", Severity.Error);
+            ShowSnackBar("Texto muio curto!", 
+                Severity.Error);
 
             return;
         }
@@ -80,8 +81,8 @@
         if(MaximoCaracteres < 300)
         {
             ShowSnackBar(
-                "O texto deve ter partes minimas de 300 caracteres"
-                , Severity.Error);
+                "O texto deve ter partes minimas de 300 caracteres",
+                Severity.Error);
 
             return;
         }
@@ -92,7 +93,8 @@
         StringBuilder parteAtual = new StringBuilder();
         foreach (string palavra in palavras)
         {
-            if (parteAtual.Length + palavra.Length + 1 > MaximoCaracteres)
+            if (parteAtual.Length + palavra.Length + 1 >
+                MaximoCaracteres)
             {
                 resultado.Add(parteAtual.ToString().Trim());
                 parteAtual.Clear();
@@ -119,6 +121,10 @@
             resultado.Add(parteAtual.ToString().Trim());
 
         TextoSeparado = resultado;
+        
+        ShowSnackBar(
+            $"Texto Separado em {TextoSeparado.Count()} partes!",
+            Severity.Success);
     }
 
     private async Task CopiarClipBoard(string id)
