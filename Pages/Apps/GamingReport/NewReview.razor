@@ -2,16 +2,15 @@
 @page "/gaming-report/new"
 @using MyPortfolio.BlazorWasm.Enums
 
-<MudContainer>
     <MudInput
         T="string"
         Placeholder="Título"
         MaxLength="250"
+        AutoGrow="false"
         AdornmentColor="Color.Dark"
         Style="width: 45%"
         Variant="Variant.Outlined"
-    />
-</MudContainer>
+        Class="ml-10 mt-8 mb-12" />
 
 <MudPaper Class="mx-10 mt-8 mb-12"
           Elevation="2">
@@ -25,14 +24,39 @@
 
 <MudSpacer/>
 
-<MudSelect T="Plataformas">
-    <MudSelectItem T="Plataformas" Value="Plataformas.Xbox">Xbox</MudSelectItem>
-    <MudSelectItem T="Plataformas" Value="Plataformas.PlayStation">PlayStation</MudSelectItem>
-    <MudSelectItem T="Plataformas" Value="Plataformas.Steam">Steam</MudSelectItem>
-    <MudSelectItem T="Plataformas" Value="Plataformas.Nintendo">Nintendo</MudSelectItem>
-    <MudSelectItem T="Plataformas" Value="Plataformas.Mobile">Mobile</MudSelectItem>
-</MudSelect>
+<MudStack Row Class="justify-space-between mud-width-full">
+    <MudStack Spacing="8"
+              Class="mx-10 my-15"
+              Style="width: 250px">
 
+        <MudText Typo="Typo.h5">Plataforma</MudText>
+
+        <MudSelect @bind-Value="selectedPlataforma"
+                   AdornmentColor="Color.Dark"
+                   FullWidth="false"
+                   AdornmentIcon="@Icons.Material.Rounded.Tv">
+
+            <MudSelectItem T="Plataformas" Value="Plataformas.Xbox">XBOX</MudSelectItem>
+            <MudSelectItem T="Plataformas" Value="Plataformas.PlayStation">PlayStation</MudSelectItem>
+            <MudSelectItem T="Plataformas" Value="Plataformas.Steam">Steam</MudSelectItem>
+            <MudSelectItem T="Plataformas" Value="Plataformas.Nintendo">Nintendo</MudSelectItem>
+            <MudSelectItem T="Plataformas" Value="Plataformas.Mobile">Mobile</MudSelectItem>
+
+        </MudSelect>
+    </MudStack>
+
+    <MudStack Spacing="8"
+              Class="mr-10 my-15"
+              Style="width: 250px">
+        <MudText Typo="Typo.h5">Nota (1-10)</MudText>
+        <MudInput T="decimal"
+                  Placeholder="9.5"
+                  MaxLength="3"
+                  Style="width: 50%"
+                  AdornmentColor="Color.Dark"
+                  Variant="Variant.Text" />
+    </MudStack>
+</MudStack>
 @code {
-    
+    private Plataformas selectedPlataforma;
 }
