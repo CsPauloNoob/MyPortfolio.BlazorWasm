@@ -1,27 +1,130 @@
 ﻿@inherits LayoutComponentBase
-@inject NavigationManager navigation;
 
-<MudThemeProvider />
-<MudPopoverProvider />
-<MudDialogProvider />
-<MudSnackbarProvider />
+<MudThemeProvider/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
 
 <MudLayout>
-    <MudAppBar>
-        <MudButton OnClick="Voltar" EndIcon="@Icons.Material.Filled.ArrowBack">
-            Voltar
-        </MudButton>
-        <MudSpacer />
-        <MudButton Size="Size.Large" EndIcon="@Icons.Custom.FileFormats.FilePdf" Style="color: white; margin-left: auto;">
-            Currículo
-        </MudButton>
+    <!-- Navbar profissional para site de análises -->
+    <MudAppBar Elevation="3" Color="Color.Dark">
+        <MudSpacer/>
+        
+        <MudText Typo="Typo.h5" Color="Color.Primary" Style="font-family: 'Rajdhani', sans-serif; font-weight: 700;">
+            GAME<span style="color: #ff5722;">CRITIC</span>
+        </MudText>
+
+        <MudSpacer/>
+        
+        <MudHidden>
+            <!-- Menu principal -->
+            <MudButton Variant="Variant.Text" Color="Color.Inherit" Class="ml-2" Href="/gaming-report">
+                Home
+            </MudButton>
+            <MudButton Variant="Variant.Text" Color="Color.Inherit" Class="ml-2" Href="/gaming-report/new">
+                Nova Review
+            </MudButton>
+            <MudButton Variant="Variant.Text" Color="Color.Inherit" Class="ml-2" Href="/releases">
+                Tudo do site
+            </MudButton>
+        </MudHidden>
+        
+        <MudSpacer/>
+        
+        <!-- Campo de busca -->
+        <MudTextField Variant="Variant.Outlined"
+                      T="string"
+                      Placeholder="Buscar jogos..."
+                      Adornment="Adornment.Start"
+                      AdornmentIcon="@Icons.Material.Filled.Search"
+                      IconColor="Color.Primary"
+                      Class="mr-4"
+                      Style="max-width: 300px; color: white"/>
+        
+        <MudIconButton Icon="@Icons.Material.Filled.AccountCircle" Color="Color.Inherit" Edge="Edge.End"/>
     </MudAppBar>
 
+    <!-- Conteúdo principal -->
     <MudMainContent>
-        @Body
+        <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="py-4">
+            @Body
+            
+            <!-- Seção de destaques -->
+            <MudPaper Elevation="0" Class="mt-8 pa-4" Style="background-color: #1e1e1e; border-left: 4px solid #ff5722;">
+                <MudText Typo="Typo.h6" Color="Color.Primary">Destaques da Semana</MudText>
+                <MudGrid>
+                    <MudItem xs="12" sm="6" md="3">
+                        <MudCard Class="game-card">
+                            <MudCardContent>
+                                <MudText Typo="Typo.body2">Melhor Avaliado</MudText>
+                                <MudText Typo="Typo.h6">Elden Ring</MudText>
+                                <MudRating Value="5" ReadOnly Class="mt-1" SelectedColor="Color.Warning"/>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudItem>
+                    <MudItem xs="12" sm="6" md="3">
+                        <MudCard Class="game-card">
+                            <MudCardContent>
+                                <MudText Typo="Typo.body2">Mais Popular</MudText>
+                                <MudText Typo="Typo.h6">Cyberpunk 2077</MudText>
+                                <MudRating Value="4" ReadOnly Class="mt-1" SelectedColor="Color.Warning"/>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudItem>
+                    <MudItem xs="12" sm="6" md="3">
+                        <MudCard Class="game-card">
+                            <MudCardContent>
+                                <MudText Typo="Typo.body2">Novo Lançamento</MudText>
+                                <MudText Typo="Typo.h6">Starfield</MudText>
+                                <MudRating Value="4.5" ReadOnly Class="mt-1" SelectedColor="Color.Warning"/>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudItem>
+                    <MudItem xs="12" sm="6" md="3">
+                        <MudCard Class="game-card">
+                            <MudCardContent>
+                                <MudText Typo="Typo.body2">Indie do Mês</MudText>
+                                <MudText Typo="Typo.h6">Hollow Knight</MudText>
+                                <MudRating Value="5" ReadOnly Class="mt-1" SelectedColor="Color.Warning"/>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudItem>
+                </MudGrid>
+            </MudPaper>
+        </MudContainer>
     </MudMainContent>
+
+    <!-- Rodapé -->
+    <MudTFootRow>
+        <MudContainer MaxWidth="MaxWidth.ExtraLarge">
+            <MudGrid>
+                <MudItem xs="12" sm="4">
+                    <MudText Typo="Typo.h6" Class="mb-2">GameCritic</MudText>
+                    <MudText Typo="Typo.body2">Análises imparciais dos melhores jogos.</MudText>
+                </MudItem>
+                <MudItem xs="12" sm="4">
+                    <MudText Typo="Typo.h6" Class="mb-2">Links</MudText>
+                    <MudList T="string" Dense="true">
+                        <MudListItem Text="Sobre Nós" Href="/about"/>
+                        <MudListItem Text="Contato" Href="/contact"/>
+                        <MudListItem Text="Política de Privacidade" Href="/privacy"/>
+                    </MudList>
+                </MudItem>
+                <MudItem xs="12" sm="4">
+                    <MudText Typo="Typo.h6" Class="mb-2">Redes Sociais</MudText>
+                    <div>
+                        <MudIconButton Icon="@Icons.Custom.Brands.Twitter" Color="Color.Inherit" Size="Size.Small"/>
+                        <MudIconButton Icon="@Icons.Custom.Brands.Facebook" Color="Color.Inherit" Size="Size.Small"/>
+                        <MudIconButton Icon="@Icons.Custom.Brands.Instagram" Color="Color.Inherit" Size="Size.Small"/>
+                        <MudIconButton Icon="@Icons.Custom.Brands.YouTube" Color="Color.Inherit" Size="Size.Small"/>
+                    </div>
+                </MudItem>
+            </MudGrid>
+            <MudDivider Class="my-4"/>
+            <MudText Typo="Typo.caption" Class="text-center">© 2023 GameCritic - Todos os direitos reservados</MudText>
+        </MudContainer>
+    </MudTFootRow>
 </MudLayout>
 
-@code {
-    void Voltar() => navigation.NavigateTo("/");
+@code{
+
 }

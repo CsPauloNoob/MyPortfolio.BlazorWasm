@@ -1,0 +1,38 @@
+@layout LayoutAlternativo
+@page "/gaming-report/new"
+@using MyPortfolio.BlazorWasm.Enums
+
+<MudContainer>
+    <MudInput
+        T="string"
+        Placeholder="Título"
+        MaxLength="250"
+        AdornmentColor="Color.Dark"
+        Style="width: 45%"
+        Variant="Variant.Outlined"
+    />
+</MudContainer>
+
+<MudPaper Class="mx-10 mt-8 mb-12"
+          Elevation="2">
+    <MudTextField
+        T="string"
+        Style="border-color: black; border-style: dashed"
+        Lines="20"
+        Placeholder="Review"
+    />
+</MudPaper>
+
+<MudSpacer/>
+
+<MudSelect T="Plataformas">
+    <MudSelectItem T="Plataformas" Value="Plataformas.Xbox">Xbox</MudSelectItem>
+    <MudSelectItem T="Plataformas" Value="Plataformas.PlayStation">PlayStation</MudSelectItem>
+    <MudSelectItem T="Plataformas" Value="Plataformas.Steam">Steam</MudSelectItem>
+    <MudSelectItem T="Plataformas" Value="Plataformas.Nintendo">Nintendo</MudSelectItem>
+    <MudSelectItem T="Plataformas" Value="Plataformas.Mobile">Mobile</MudSelectItem>
+</MudSelect>
+
+@code {
+    
+}

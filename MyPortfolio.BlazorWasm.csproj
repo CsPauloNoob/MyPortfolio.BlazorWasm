@@ -15,8 +15,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Components\" />
-    <Folder Include="pdf\" />
+    <Compile Remove="pdf\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="pdf\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="pdf\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="pdf\**" />
   </ItemGroup>
 	
 </Project>
