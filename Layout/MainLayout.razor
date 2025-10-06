@@ -1,19 +1,52 @@
 ﻿@inherits LayoutComponentBase
-@inject NavigationManager navigation;
+@inject NavigationManager Navigation
+@inject IJSRuntime JsRuntime
 
-<MudThemeProvider />
-<MudPopoverProvider />
-<MudDialogProvider />
-<MudSnackbarProvider />
+<MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme"/>
+<MudPopoverProvider/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
 
-<MudLayout>
-    
+<MudDrawerContainer Style="height:100vh;"> <!-- garante altura total da janela -->
 
-    <NavMenu/>
+    <MudDrawer Variant="DrawerVariant.Responsive"
+               Breakpoint="Breakpoint.Md"
+               Style="position: fixed;"
+               Open="@_drawerOpen"
+               Fixed="true"
+               Elevation="1"
+               Class="mud-height-full"> <!-- mantém o drawer com altura total -->
+        <SideNav/>
+    </MudDrawer>
 
-    <MudMainContent>
-        @Body
+    <MudMainContent Style="overflow:auto;"> <!-- scroll apenas no conteúdo principal -->
+        <MudAppBar Fixed="true" Elevation="1" Color="Color.Primary">
+            <MudIconButton Icon="@Icons.Material.Filled.Menu"
+                           Color="Color.Inherit"
+                           OnClick="@ToggleDrawer"/>
+
+            <NavMenu OnDarkModeToggle="ToggleDarkMode" IsDarkMode="_isDarkMode"/>
+        </MudAppBar>
+
+        <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="my-4">
+            @Body
+        </MudContainer>
     </MudMainContent>
-</MudLayout>
 
+</MudDrawerContainer>
 
+@code {
+    private bool _drawerOpen = true;
+    private bool _isDarkMode = false;
+    private readonly MudTheme _theme = new();
+
+    private void ToggleDrawer()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    private void ToggleDarkMode()
+    {
+        _isDarkMode = !_isDarkMode;
+    }
+}

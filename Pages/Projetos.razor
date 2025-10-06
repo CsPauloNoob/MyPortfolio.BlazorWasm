@@ -1,54 +1,117 @@
-﻿@page "/Projetos"
+﻿@* File: Pages/Projetos.razor *@
+@page "/Projetos"
+@using MudBlazor
+@using System
 
-<MudText Align="Align.Center" Class="mb-8" Typo="Typo.h3">Projetos e Portfólio</MudText>
+<MudText Align="Align.Center" Class="mb-2" Typo="Typo.h3">Projetos e Portfólio</MudText>
+<MudText Align="Align.Center" Class="mb-6" Typo="Typo.subtitle1">Projetos selecionados — clique para abrir no GitHub</MudText>
 
-<MudGrid Class="">
-    @if(MeusProjetos.Any())
+<MudPaper Class="pa-4 mb-4" Elevation="1">
+    <MudGrid>
+        <MudItem xs="12" sm="8">
+            <MudTextField @bind-Value="_filter"
+                          Placeholder="Buscar por nome ou descrição..."
+                          Adornment="Adornment.Start"
+                          AdornmentIcon="@Icons.Material.Filled.Search"
+                          Immediate="true"
+                          Class="w-100" />
+        </MudItem>
+        <MudItem xs="12" sm="4" Class="d-flex justify-end align-center">
+            <MudText Typo="Typo.caption" Class="mr-2">Total:</MudText>
+            <MudBadge Color="Color.Primary" Content="@FilteredProjects.Count" />
+        </MudItem>
+    </MudGrid>
+</MudPaper>
+
+<MudGrid Gutter="3">
+    @if (!FilteredProjects.Any())
     {
-        @foreach(var proj in MeusProjetos)
-        { 
-            <MudItem xs="6">
-            <MudCard Elevation="3" Outlined="true" Class="ma-2" Style="border-color:black">
-                <MudCardHeader>
-                    <CardHeaderContent>
-                        <MudText Typo="Typo.h5">@proj.Name</MudText>
-                    </CardHeaderContent>
-                </MudCardHeader>
+        <MudItem xs="12">
+            <MudAlert Severity="Severity.Info" Dense="true">Nenhum projeto encontrado.</MudAlert>
+        </MudItem>
+    }
+    else
+    {
+        @foreach (var proj in FilteredProjects)
+        {
+            <MudItem xs="12" sm="6" md="4" lg="3">
+                <MudCard Class="project-card" Outlined="true" Elevation="2">
+                    <MudCardMedia Image="@GetImageUrl(proj.Name)" Height="150" />
 
-                <MudPaper Elevation="3" Class="d-flex">
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h6">@proj.Name</MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+
                     <MudCardContent>
-                        <MudText Typo="Typo.body1">
-                            @proj.Description
+
+                        <MudText Typo="Typo.caption" Class="mt-2">Autor: <b>@proj.Author</b></MudText>
+
+                        <div class="chips-row">
+                            <MudChip T="string" Color="Color.Secondary" Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Code">Projeto</MudChip>
+                            <MudChip T="string" Color="Color.Default" StartIcon="@Icons.Material.Filled.Tag">Estudo</MudChip>
+                        </div>
+                        
+                        <MudText Typo="Typo.body2">
+                            @Truncate(proj.Description, 180)
                         </MudText>
-                        <MudSpacer />
-                        <MudText> 
-                            Autor: <b>@proj.Author</b>
-                        </MudText>
+                        
                     </MudCardContent>
-                </MudPaper>
 
+                    <MudCardActions Class="d-flex justify-space-between align-center">
+                        <div></div> <!-- mantém espaço à esquerda se necessário -->
 
-                <MudCardActions Class="d-flex align-center justify-center">
-                    <MudIconButton
-                        Icon="@Icons.Custom.Brands.GitHub"
-                        Edge="Edge.False" Href="@proj.Link"
-                        Class="align-self-center"
-                        Target="_blank"/>
-                </MudCardActions>
+                        <div class="d-flex">
+                            <MudTooltip Text="Abrir no GitHub">
+                                <MudIconButton Icon="@Icons.Custom.Brands.GitHub"
+                                               Color="Color.Primary"
+                                               Href="@proj.Link"
+                                               Target="_blank" />
+                            </MudTooltip>
 
-            </MudCard>
+                            <MudButton Variant="Variant.Text"
+                                       Color="Color.Primary"
+                                       Href="@proj.Link"
+                                       Target="_blank"
+                                       StartIcon="@Icons.Material.Filled.OpenInNew">
+                                Ver
+                            </MudButton>
+                        </div>
+                    </MudCardActions>
+                </MudCard>
             </MudItem>
         }
     }
 </MudGrid>
 
 @code {
+    private string _filter = string.Empty;
     public List<RepositorioGithub> MeusProjetos { get; private set; } = new();
 
-    protected override async Task OnParametersSetAsync()
-    {
-        List<RepositorioGithub> repositorios = new RepositorioGithub().DefaultProjetos();
+    private List<RepositorioGithub> FilteredProjects => MeusProjetos
+        .Where(p =>
+            string.IsNullOrWhiteSpace(_filter)
+            || (p.Name?.Contains(_filter, StringComparison.OrdinalIgnoreCase) ?? false)
+            || (p.Description?.Contains(_filter, StringComparison.OrdinalIgnoreCase) ?? false))
+        .ToList();
 
-        MeusProjetos = repositorios;
+    protected override void OnParametersSet()
+    {
+        // mantém sua lógica atual para carregar projetos (sincrona no exemplo original)
+        List<RepositorioGithub> repositorios = new RepositorioGithub().DefaultProjetos();
+        MeusProjetos = repositorios ?? new();
+    }
+
+    private static string Truncate(string? text, int max)
+    {
+        if (string.IsNullOrEmpty(text)) return string.Empty;
+        return text.Length <= max ? text : text.Substring(0, max).TrimEnd() + "…";
+    }
+
+    private static string GetImageUrl(string? seed)
+    {
+        var s = string.IsNullOrWhiteSpace(seed) ? "placeholder" : Uri.EscapeDataString(seed);
+        return $"https://picsum.photos/seed/{s}/600/300";
     }
 }

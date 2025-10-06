@@ -1,13 +1,14 @@
 ﻿@page "/"
+@using System.Runtime.CompilerServices
 
 <div id="resumo"></div>
 <MudPaper Class="px-10 pb-20 py-8">
     <MudStack Spacing="2">
         <MudText Typo="Typo.h3" Align="Align.Start" Style="color: #B8860B; font-weight: bold;">
-            PAULO <span style="color: #2F4F4F;">SÉRGIO</span>
+            PAULO <span style="color: #008AD7;">SÉRGIO</span>
         </MudText>
         <MudText Class="mt-n4" Typo="Typo.subtitle1" Align="Align.Start" Style="color: #A9A9A9; font-weight: bold;">
-            Desenvolvedor Back-End .NET
+            Engenheiro de Software
         </MudText>
     </MudStack>
 
@@ -20,7 +21,7 @@
     </div>
     
     <MudText Typo="Typo.body1" Align="Align.Left" Style="line-height: 1.0; text-align: justify; margin-right:4%">
-        Olá! Sou um programador especializado em desenvolvimento back-end utilizando <strong>.NET</strong> e
+        Olá! Sou um engenheiro de software especializado em desenvolvimento back-end utilizando <strong>.NET</strong> e
         <strong>C#</strong>. Sempre gostei muito de tecnologia no geral, o que me levou a iniciar minha jornada
         acadêmica em Análise e Desenvolvimento de Sistemas em 2018. Minha formação e experiência me tornaram um
         profissional pragmático, com uma abordagem prática e eficiente para resolver problemas e desenvolver soluções
@@ -30,7 +31,7 @@
         tecnológicas me deixa extremamente empolgado. No entanto, compreendo que a excelência também reside na atenção
         aos detalhes e na execução de tarefas básicas e repetitivas com o mesmo nível de dedicação e cuidado.
         <br/><br/>
-        Trabalhar em equipe é uma das minhas maiores paixões. Acredito que a colaboração é uma oportunidade valiosa para
+        Trabalhar em equipe é uma das coisas que mais me atraem. Acredito que a colaboração é uma oportunidade valiosa para
         aprender e trocar experiências com diversas pessoas, o que enriquece não só o projeto em desenvolvimento, mas
         também o crescimento pessoal e profissional de todos os envolvidos.
         <br/><br/>
@@ -62,7 +63,7 @@
     </MudContainer>
 
     <MudDivider Class="my-4"/>
-
+    
     <div id="conhecimento">
         <MudText Class="pb-5" Typo="Typo.h5" Align="Align.Start" Style="font-weight: bold;" HtmlTag="">
             CONHECIMENTO TÉCNICO
@@ -75,6 +76,14 @@
             <MudListItem>C++</MudListItem>
             <MudListItem>.NET/ASP.Net Core</MudListItem>
             <MudListItem>Entity Framework</MudListItem>
+        </MudList>
+
+        <MudText Typo="Typo.h6" Style="font-weight: bold;">Ferramentas, Cloud e DevOps</MudText>
+        <MudList Dense="false" ReadOnly="true" T="string">
+            <MudListItem>Azure</MudListItem>
+            <MudListItem>AWS</MudListItem>
+            <MudListItem>DevOps (pipelines, integração contínua)</MudListItem>
+            <MudListItem>Jenkins</MudListItem>
         </MudList>
 
         <MudText Typo="Typo.h6" Style="font-weight: bold;">Sistemas Operacionais</MudText>
@@ -98,7 +107,7 @@
     </MudStack>
 
     <MudDivider Class="my-4"/>
-    
+
     <div id="exp">
         <MudText Typo="Typo.h5" Align="Align.Start" Style="font-weight: bold; margin-bottom: 20px;">
             EXPERIÊNCIA
@@ -124,6 +133,17 @@
             </MudText>
         </MudStack>
 
+        <MudStack Spacing="4">
+            <MudText Typo="Typo.h6" Style="font-weight: bold; margin-bottom: 4px;">
+                Desenvolvedor Freelancer — Landing Page
+            </MudText>
+            <MudText Typo="Typo.body1" Style="text-align: justify; line-height: 1.4;">
+                Desenvolvi uma landing page responsiva como trabalho freelance, implementando layout e estilos, formulários
+                de contato e otimizações básicas para performance e SEO. A entrega incluiu HTML, CSS, JavaScript e integração
+                com serviço de envio de formulários.
+            </MudText>
+        </MudStack>
+
         <MudStack Spacing="10">
             <MudText Typo="Typo.h6" Style="font-weight: bold; margin-bottom: 4px;">
                 Experiência no Desafio "May the 4th" do Balta.io
@@ -142,7 +162,7 @@
     </MudStack>
 
     <MudDivider Class="my-4"/>
-    
+
     <div id="educ">
         <MudText Typo="Typo.h5" Align="Align.Start" Style="font-weight: bold; margin-bottom: 20px;">
             EDUCAÇÃO
@@ -155,6 +175,15 @@
             </MudText>
             <MudText Typo="Typo.body1" Style="line-height: 1.4;">
                 UNIFAEL <strong>2018-2020</strong>
+            </MudText>
+        </MudStack>
+
+        <MudStack Spacing="4">
+            <MudText Typo="Typo.h6" Style="font-weight: bold; margin-bottom: 4px;">
+                Pós-graduação em Engenharia da Computação com .NET
+            </MudText>
+            <MudText Typo="Typo.body1" Style="line-height: 1.4;">
+                INFNET <strong>2025-2026</strong>
             </MudText>
         </MudStack>
     </MudStack>
@@ -209,5 +238,4 @@
 
 @code
 {
-
 }

@@ -1,0 +1,78 @@
+/* File: Layout/SideNav.razor (alterar MudNavMenu para incluir a classe `sidenav`)
+   Exemplo: <MudNavMenu Class="sidenav d-flex flex-column justify-center mud-height-full mud-surface pa-2"> 
+*/
+
+/* File: Layout/SideNav.razor.css */
+:root {
+    --sidenav-accent: #FFC107; /* âmbar claro */
+    --sidenav-accent-strong: #FF9800;
+    --sidenav-active-bg: rgba(255,193,7,0.10);
+    --sidenav-icon-muted: rgba(0,0,0,0.54);
+    --sidenav-text: rgba(0,0,0,0.87);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --sidenav-accent: #FFB300; /* âmbar ajustado para dark */
+        --sidenav-accent-strong: #FF8F00;
+        --sidenav-active-bg: rgba(255,179,0,0.10);
+        --sidenav-icon-muted: rgba(255,255,255,0.72);
+        --sidenav-text: rgba(255,255,255,0.92);
+    }
+}
+
+.sidenav {
+    /* mantém visual integrado com a surface do tema */
+    background: transparent;
+    color: var(--sidenav-text);
+    padding: 0.5rem;
+}
+
+/* Links do menu */
+.sidenav .mud-nav-link,
+.sidenav .mud-nav-group {
+    border-radius: 8px;
+    transition: background-color 150ms ease, color 150ms ease, transform 120ms ease;
+}
+
+/* ícone à esquerda */
+.sidenav .mud-nav-link .mud-icon-root,
+.sidenav .mud-nav-group .mud-icon-root {
+    color: var(--sidenav-icon-muted);
+    transition: color 150ms ease, transform 150ms ease;
+}
+
+/* hover */
+.sidenav .mud-nav-link:hover,
+.sidenav .mud-nav-group:hover {
+    background-color: var(--sidenav-active-bg);
+    transform: translateY(-1px);
+}
+
+/* estado ativo - borda esquerda e ícone colorido */
+.sidenav .mud-nav-link.mud-nav-link-active,
+.sidenav .mud-nav-group.mud-nav-group-expanded {
+    background-color: var(--sidenav-active-bg);
+    border-left: 3px solid var(--sidenav-accent);
+    padding-left: calc(0.75rem - 3px); /* ajusta espaço considerando a borda */
+}
+
+.sidenav .mud-nav-link.mud-nav-link-active .mud-icon-root,
+.sidenav .mud-nav-group.mud-nav-group-expanded .mud-icon-root {
+    color: var(--sidenav-accent-strong);
+    transform: translateX(-2px);
+}
+
+/* destaque sutil no texto do link ativo */
+.sidenav .mud-nav-link.mud-nav-link-active .mud-typography,
+.sidenav .mud-nav-group.mud-nav-group-expanded .mud-typography {
+    color: var(--sidenav-text);
+    font-weight: 600;
+}
+
+/* responsivo: reduz padding em telas pequenas */
+@media (max-width: 600px) {
+    .sidenav { padding: 0.25rem; }
+    .sidenav .mud-nav-link,
+    .sidenav .mud-nav-group { border-radius: 6px; }
+}

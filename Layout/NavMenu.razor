@@ -1,74 +1,46 @@
 ﻿@inject NavigationManager navigation
 @inject IJSRuntime JsRuntime
 
-<MudAppBar>
-    <MudMenu Dense
-    Variant="Variant.Text"
+<MudSpacer/>
+
+<MudButton Size="Size.Large"
+           OnClick="DownloadCurriculum"
+           EndIcon="@Icons.Custom.FileFormats.FilePdf"
+           Color="Color.Inherit">
+    Currículo
+</MudButton>
+
+<MudIconButton
     Size="Size.Medium"
-    Color="Color.Dark"
-    Icon="@Icons.Material.TwoTone.List">
-        <MudMenuItem 
-            Icon="@Icons.Material.Outlined.Home"
-            OnClick="IrParaHome">Inicio</MudMenuItem>
+    OnClick="() => OnDarkModeToggle.InvokeAsync()"
+    Icon="@(IsDarkMode ? Icons.Material.Filled.DarkMode : Icons.Material.Filled.LightMode)"
+    Color="Color.Inherit"
+/>
 
-        <MudDivider />
-
-        <MudMenuItem
-            Icon="@Icons.Material.Outlined.TextFields"
-            OnClick="GoToSeparadorTxt">Separador De texto</MudMenuItem>
-
-        <MudDivider />
-
-        <MudMenuItem 
-            Icon="@Icons.Material.Outlined.Gamepad"
-            OnClick="IrParaGamingReport">GamingRank</MudMenuItem>
-
-        <MudDivider/>
-    </MudMenu>
-
-    <MudSpacer />
-    <MudButton 
-    OnClick="GoToProjeto"
-    Style="color: white"
-    EndIcon="@Icons.Custom.Uncategorized.Folder">
-        Projetos
-    </MudButton>
-
-    <MudButton Size="Size.Large" 
-    OnClick="DownloadCurriculum"
-    EndIcon="@Icons.Custom.FileFormats.FilePdf" 
-    Style="color: white; margin-left: auto;">
-        Currículo
-    </MudButton>
-
-</MudAppBar>
+<MudIconButton
+    Size="Size.Medium"
+    OnClick="OpenAccount"
+    Icon="@Icons.Material.Filled.AccountCircle"
+    Color="Color.Inherit"
+    AriaLabel="Conta"
+/>
 
 @code
 {
+    [Parameter]
+    public EventCallback OnDarkModeToggle { get; set; }
 
-    void GoToProjeto()
-    {
-        navigation.NavigateTo("Projetos");
-    }
-
-    void GoToSeparadorTxt()
-    {
-        navigation.NavigateTo("separadortxt");
-    }
-
-    void IrParaHome()
-    {
-        navigation.NavigateTo("/");
-    }
-
-    void IrParaGamingReport()
-    {
-        navigation.NavigateTo("gamingreport");
-    }
+    [Parameter]
+    public bool IsDarkMode { get; set; }
 
     void DownloadCurriculum()
     {
         JsRuntime.InvokeVoidAsync("downloadFileFromUrl", "Paulo.pdf",
             "https://drive.google.com/uc?export=download&id=1QsnOIZzty-70RfSCt05uqzXgCkZnsL0I");
+    }
+
+    void OpenAccount()
+    {
+        // Intencionalmente vazio por enquanto
     }
 }

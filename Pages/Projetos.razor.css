@@ -1,0 +1,69 @@
+/* File: Pages/Projetos.razor.css */
+:root {
+    --card-bg: #fff8e1; /* creme suave */
+    --card-border: rgba(181,136,0,0.12);
+    --card-shadow: 0 8px 20px rgba(30,30,30,0.06);
+    --chip-bg: rgba(255,235,59,0.12);
+    --chip-text: #3b2f00;
+    --muted-text: #4b4b4b;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --card-bg: #2b2a24; /* âmbar escuro */
+        --card-border: rgba(255,200,50,0.08);
+        --card-shadow: 0 8px 20px rgba(0,0,0,0.6);
+        --chip-bg: rgba(255,180,0,0.12);
+        --chip-text: #fff8e1;
+        --muted-text: #cfc7b8;
+    }
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
+    color: inherit;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.14);
+}
+
+.project-card .mud-card-media {
+    object-fit: cover;
+    filter: saturate(1.05) contrast(0.98);
+}
+
+/* chips styling */
+.chips-row {
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.5rem;
+    margin-top:0.5rem;
+    align-items:center;
+}
+
+.chips-row .mud-chip {
+    background-color: var(--chip-bg);
+    color: var(--chip-text);
+    border: none;
+}
+
+/* author and description contrast */
+.mud-card-content .mud-text[typo="body2"],
+.mud-card-content .mud-text[typo="caption"] {
+    color: var(--muted-text);
+}
+
+/* responsive fallback */
+.w-100 { width:100%; }
+
+@media (max-width: 600px) {
+    .project-card { margin-bottom: 12px; }
+}
