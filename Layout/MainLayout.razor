@@ -36,13 +36,21 @@
 </MudDrawerContainer>
 
 @code {
-    private bool _drawerOpen = true;
+    private bool _drawerOpen = false;
     private bool _isDarkMode = false;
     private readonly MudTheme _theme = new();
 
     private void ToggleDrawer()
     {
         _drawerOpen = !_drawerOpen;
+    }
+
+    protected override void OnInitialized()
+    {
+        #if DEBUG
+        _drawerOpen = true;
+        #endif
+        base.OnInitialized();
     }
 
     private void ToggleDarkMode()
